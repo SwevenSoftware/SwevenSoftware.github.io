@@ -3,7 +3,7 @@ layout: page
 title: Utente
 permalink: /android/utente
 parent: Manuali Android
+as_toc:true
 ---
 
-# Utente
-Manuale utente
+# Manuale utente Android
