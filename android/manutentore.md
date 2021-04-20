@@ -104,3 +104,40 @@ Se si desidera inoltre installare l’applicazione sul proprio dispositivo Andro
 5. fare il run del progetto tramite Android Studio andando su Run > Run ’app’ o la shortcutCtrl + F10.
 
 Se non si disponesse di un dispositivo Android fisico è possibile utilizzare l’emulatore fornito da Android Studio. Per utilizzarlo è sufficiente selezionare il dispositivo emulato, invece che quello fisico,  dalla tendina "Available devices". Il resto dei passi per l’installazione rimangono gli stessi.
+
+# Test
+## Test Unità
+I test di unità sono stati sviluppati utilizzando Junit e Mockito.
+Per eseguirli è sufficiente fare tasto destro sul file di test e cliccare su "Run Test", il compilatore di Android Studio si occuperà del resto.
+## Test Interfaccia
+I test di interfaccia invece sono stati sviluppati tramite Espresso.
+Per eseguirli è necessario prima fare il run sul dispositivo mobile o sulla macchina virtuale, e poi fare "Run test" sul file di test.
+
+## GitHub Actions
+Il servizio di Continuous IntegrationG che è stato deciso di utilizzare è GitHub Actions, fornito appunto da GitHub. Questo permette di creare dei workflow personalizzati, ovvero dei processi automatici creati sulla base delle proprie esigenze. Ciò ha l’obiettivo di automatizzare il ciclo di vita di sviluppo del software grazie ad un ampia gamma di strumenti e servizi.
+# Architettura del prodotto
+L'architettura scelta per l'applicazione mobile è il MVVM (Model view viewmodel).
+Questa architetura è ottima per separare logica da presentazione, ma non solo, è particolarmente utile per gestire con efficacia e scalabilità le chiamate API.
+Ogni funzionalità infatti segue questa architettura, con alcune aggiunte per soddisfare le necessità intrinseche ad ogni funzionalità.
+
+Questo si denota dal nostro diagramma dei package:
+
+![](Package_Diagram.PNG)
+
+Il package UI gestiscono i file della view, mentre il package data gestisce il model e il package services contiene i file del viewModel.
+Invece il package Res contiene tutti i file xml e bipmap per gestire l'aspetto e le icone dell'applicazione.
+
+Nello specifico quindi ogni funzionalità ricrea il MVVM, come descritto in questo diagramma delle classi, specifico per la funzionalità UserRooms:
+
+![](pasted%20image%200.png)
+
+Da questo diagramma possiamo vedere come sono implementati i metodi ed i file del MVVM.
+Per prima cosa viene creato il model, per gestire gli oggetti in entrata dal lato server.
+La chiamata Get all'API viene fatta dall'interfaccia APIRooms, creata dalla UserRepository tramite il nostro Retrofit Builder, implementato nel file NetworkClient.
+In NetworkCLient vengono anche gestiti i certificati http tramite la librria Okhttp3.
+L'userRoomsFragment gestisce assieme ai file XML la view, e alla creazione di sè stesso tramite un UserRoomsViewModelFactory crea il nostro viewModel, UserRoomsViewModel.
+I dati che ci vengono passati dal lato server, tramite Retrofit ed il Model sono dati LiveData, i quali vengono gestiti da UserRoomsRepository e UserRoomsViewModel tramite observers definiti nei file.
+Questi observers si occupano di gestire e notificare alla view i cambiamenti agli oggetti, in modo da poter aggiornare i dati visti dall'utente nell'applicazione.
+
+Come introdotto prima, ogni funzionalità ha dei bisogni aggiuntivi propri, in questo caso ad esempio è stato necessario implementare un UserRoomsAdapter per gestire dinamicamente gli oggetti della lista prenotazioni, implementata tramite uno standard RecyclerView.
+
