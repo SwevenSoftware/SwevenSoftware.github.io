@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Manuali per l'utilizzo e la manutenzione del prodotto
   BlockCOVID sviluppato da SwevenSoftware
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "SwevenSoftware.github.io"
+url: ""
 github_username: SwevenSoftware
 
 # Build settings
