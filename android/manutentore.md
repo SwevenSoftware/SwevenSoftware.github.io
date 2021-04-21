@@ -31,6 +31,7 @@ L'applicazione è quindi divisa in 3 parti:
 
 ## Riferimenti
 ### Riferimenti normativi
+
 ### Riferimenti informativi
 
 # Tecnologie e Librerie Utilizzate
@@ -167,7 +168,7 @@ I test di interfaccia invece sono stati sviluppati tramite Espresso.
 Per eseguirli è necessario prima fare il run sul dispositivo mobile o sulla macchina virtuale, e poi fare "Run test" sul file di test.
 
 ## GitHub Actions
-Il servizio di Continuous IntegrationG che è stato deciso di utilizzare è GitHub Actions, fornito appunto da GitHub. Questo permette di creare dei workflow personalizzati, ovvero dei processi automatici creati sulla base delle proprie esigenze. Ciò ha l'obiettivo di automatizzare il ciclo di vita di sviluppo del software grazie ad un ampia gamma di strumenti e servizi.
+Il servizio di Continuous Integration che è stato deciso di utilizzare è GitHub Actions, fornito appunto da GitHub. Questo permette di creare dei workflow personalizzati, ovvero dei processi automatici creati sulla base delle proprie esigenze. Ciò ha l'obiettivo di automatizzare il ciclo di vita di sviluppo del software grazie ad un ampia gamma di strumenti e servizi.
 
 # Architettura del prodotto
 L'architettura scelta per l'applicazione mobile è il MVVM (Model View ViewModel).
