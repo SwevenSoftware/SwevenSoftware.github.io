@@ -10,17 +10,29 @@ le cui firme digitali vengono salvate sulla blockchain ethereum, in modo da rend
 inopponibili a terzi. Il sistema è composto da tre moduli:
 
 ## Server
-Il modulo server si occupa di esporre le API del sistema
+[![Latest release](https://badgen.net/github/release/SwevenSoftware/BlockCOVID-server)](https://github.com/SwevenSoftware/BlockCOVID-server/releases/latest)
+![Build status](https://github.com/SwevenSoftware/BlockCOVID-server/actions/workflows/build-server.yml/badge.svg)
+[![codecov](https://codecov.io/gh/SwevenSoftware/BlockCOVID-server/branch/develop/graph/badge.svg)](https://codecov.io/gh/SwevenSoftware/BlockCOVID-server)
 
-[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-server){: .btn .btn-primary}
+Il modulo server si occupa di esporre le API che i client poi
+utilizzeranno. Oltre a gestire l'interazione con la blockchain
+ethereum per il salvataggio delle firme dei report generati.
+
+[Manuale Manutentore](/manutentore/server){: .btn .btn-primary }
+[Manuale Utente](/utente/server){: .btn .btn-primary }
+[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-server){: .btn }
 
 
 ## Android
 Il modulo android è il client per i dipendenti e gli addetti alle pulizie
 
-[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-android){: .btn .btn-primary}
+[Manuale Manutentore](/manutentore/android){: .btn .btn-primary }
+[Manuale Utente](/utente/android){: .btn .btn-primary }
+[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-android){: .btn }
 
 ## Web
 Il modulo web è il client rivolto agli amministratori del sistema
 
-[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-web){: .btn .btn-primary}
+[Manuale Manutentore](/manutentore/web){: .btn .btn-primary }
+[Manuale Utente](/utente/web){: .btn .btn-primary }
+[GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-web){: .btn }

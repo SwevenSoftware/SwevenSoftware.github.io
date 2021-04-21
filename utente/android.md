@@ -1,11 +1,14 @@
 ---
 layout: page
-title: Utente
-permalink: /android/utente
-parent: Manuali Android
+title: Android
+parent: Manuale Utente
 ---
 
-# Manuale utente Android
+# Manuale Utente Android
+
+1. TOC
+{:toc}
+
 # Introduzione
 ## Scopo del Documento
 Lo scopo di questo documento è illustrare tutte le funzionalità dell'app Android BlockCovid. In questo modo l'utente finale avrà a disposizione tutte le indicazioni per il corretto uso dell'applicazione.
@@ -24,4 +27,3 @@ La pulizia e le prenotazioni delle postazioni saranno quindi monitorate costante
 # Istruzioni per l'utilizzo dell'applicazione
 
 # Elenco delle funzionalità principali
-

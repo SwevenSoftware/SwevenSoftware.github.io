@@ -1,38 +1,16 @@
 ---
 layout: page
-title: Manutentore
-permalink: /android/manutentore
-parent: Manuali Android
+title: Android
+parent: Manuale Manutentore
 ---
 
-## Indice
+# Indice
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-# Manuale sviluppatore Android
-## Introduzione
-Lo scopo del Manuale per lo sviluppatore è presentare l'architettura del prodotto BlockCovid, l'organizzazione del codice sorgente e tutte le informazioni relative al mantenimento ed estensione del progetto.
-Questo documento ha il fine di illustrare le procedure di installazione e sviluppo, illustrare i framework e le librerie utilizzate, facendo uso di diagrammi UML dei package, classe e di sequenza.
-
-## Scopo del Documento
-Il prodotto che si vuole sviluppare è BlockCOVID, un'applicazione web e mobile mirata a gestire al meglio la situazione pandemica all'interno di aziende ed aule studio. L'applicazione include al suo interno tre tipi di utenti che utilizzeranno il software, con le loro relative esigenze:
-
-- amministratore: gestisce le stanze ed ha accesso ai report giornalieri e in tempo reale;
-- dipendente: riceve informazioni utili sulla postazione di lavoro che può prenotare ed igienizzare con un eventuale kit fornito in loco;
-- addetto alle pulizie: conosce lo stato di pulizia di ogni stanza per ottimizzare il suo operato.
-
-L'applicazione è quindi divisa in 3 parti:
-
-- Back-End server: gestisce le REST API, l'uso della blockchain e l'implementazione di Docker;
-- Front-End Web: gestisce un applicativo web utilizzato esclusivamente dall'amministra-tore per gestire i dati di stanze, prenotazioni ed account;
-- Applicazione Android: gestisce un'applicazione mobile che sarà utilizzata da tutti gliutenti per prenotare, visualizzare e gestire le postazioni.
-
-## Riferimenti
-### Riferimenti normativi
-
-### Riferimenti informativi
+# Manuale Manutentore Android
 
 # Tecnologie e Librerie Utilizzate
 ## Tecnologie
@@ -168,7 +146,7 @@ I test di interfaccia invece sono stati sviluppati tramite Espresso.
 Per eseguirli è necessario prima fare il run sul dispositivo mobile o sulla macchina virtuale, e poi fare "Run test" sul file di test.
 
 ## GitHub Actions
-Il servizio di Continuous Integration che è stato deciso di utilizzare è GitHub Actions, fornito appunto da GitHub. Questo permette di creare dei workflow personalizzati, ovvero dei processi automatici creati sulla base delle proprie esigenze. Ciò ha l'obiettivo di automatizzare il ciclo di vita di sviluppo del software grazie ad un ampia gamma di strumenti e servizi.
+Il servizio di [Continuous Integration](/glossario#continuous-integration) che è stato deciso di utilizzare è GitHub Actions, fornito appunto da GitHub. Questo permette di creare dei workflow personalizzati, ovvero dei processi automatici creati sulla base delle proprie esigenze. Ciò ha l'obiettivo di automatizzare il ciclo di vita di sviluppo del software grazie ad un ampia gamma di strumenti e servizi.
 
 # Architettura del prodotto
 L'architettura scelta per l'applicazione mobile è il MVVM (Model View ViewModel).
@@ -177,14 +155,14 @@ Ogni funzionalità infatti segue questa architettura, con alcune aggiunte per so
 
 Questo si denota dal nostro diagramma dei package:
 
-![](/android/imgs/package_diagram.png)
+![](/assets/android/package_diagram.png)
 
 Il package "ui" gestiscono i file della view e del viewmodel, il package "data" gestisce il model e il package "services" contiene le interfacce API.
 Invece il package "res" contiene tutti i file xml e png per gestire l'aspetto e le icone dell'applicazione.
 
 Nello specifico quindi ogni funzionalità ricrea il MVVM, come descritto in questo diagramma delle classi, specifico per la funzionalità UserRooms:
 
-![](/android/imgs/class_diagram.png)
+![](/assets/android/class_diagram.png)
 
 Da questo diagramma possiamo vedere come sono implementati i metodi e le classi del MVVM.
 Per prima cosa viene creato il model, per gestire gli oggetti in entrata dal lato server.
