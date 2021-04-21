@@ -50,6 +50,9 @@ Il lettore RFID è sempre acceso durante la permanenza dell'utente nella landing
 ## Modifica Account
 In ogni pagina è possibile accedere alla pagina account dal bottone in alto a destra, qui vengono mostrate tutte le informazioni dell'utente ed è anche possibile modificare la propria password.
 
+## Segnare una stanza come igienizzata
+I cleaner possono segnare una stanza come igienizzata direttamente dalla loro lista stanze, la quale gli viene mostrata grazie alle loro specifiche credenziali.
+
 
 
 
