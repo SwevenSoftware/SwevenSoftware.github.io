@@ -14,7 +14,6 @@ parent: Manuale Utente
 ## Requisiti minimi di sistema
 - Dispositivo Android dotato di tecnologia RFID
 
-# Istruzioni per l'utilizzo dell'applicazione
 
 # Funzionalità
 ## Login
