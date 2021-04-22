@@ -36,3 +36,7 @@ Il modulo web è il client rivolto agli amministratori del sistema
 [Manuale Manutentore](/manutentore/web){: .btn .btn-primary }
 [Manuale Utente](/utente/web){: .btn .btn-primary }
 [GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-web){: .btn }
+
+## Glossario
+All'interno dei documenti sono presenti termini che possono presentare significati ambigui rispetto al contesto. Al fine quindi di risolvere possibili incomprensioni viene fornito un file chiamato Glossario contenente i suddetti termini e la loro spiegazione.
+Nella seguente documentazioni tali parole saranno contrassegnate da una "G" a pedice di tutte le occorrenze della parola.
