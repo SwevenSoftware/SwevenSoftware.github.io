@@ -1,9 +1,12 @@
 ---
 layout: page
-title: Report addetto pulizie
+title: Reports
 parent: Server
 grand_parent: Manuale Utente
 ---
+# Reports
+Di seguito venogno riportate le API esposte dal server per la richiesta dei report di utlizzo delle stanze
+
 # Show Accessible Accounts
 
 Show all Accounts the active User can access and with what permission level.
