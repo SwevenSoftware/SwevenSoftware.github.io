@@ -5,68 +5,45 @@ parent: Server
 grand_parent: Manuale Utente
 ---
 # Reports
-Di seguito venogno riportate le API esposte dal server per la richiesta dei report di utlizzo delle stanze
+{: .no_toc}
+Di seguito venogno riportate le API esposte dal server per la
+richiesta dei report di utlizzo delle stanze
 
-# Show Accessible Accounts
+<details open markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-Show all Accounts the active User can access and with what permission level.
-Includes their own Account if they have one.
+# Report sanificazione stanze
 
-**URL** : `/api/accounts/`
+L'amministratore è in grado di richiedere un report sulla
+sanificazione delle stanze che gli verrà fornito in formato pdf.
+
+**URL** : `/api/reports/cleaner`
 
 **Metodo** : `GET`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : ADMIN
 
-**Dati constraints** : `{}`
+## Messaggi di successo
 
-## Messaggi di successos
-
-**Condizione** : User can not see any Accounts.
+**Condizione** : Report creato con successo
 
 **Codice** : `200 OK`
 
-**Contenuto** : `{[]}`
+**Contenuto** : documento pdf
 
-### OR
+## Messaggi di errore
 
-**Condizione** : User can see one or more Accounts.
+| Codice                                                              | Motivazione                                                       |
+|:--------------------------------------------------------------------|:------------------------------------------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | permessi insufficenti                                             |
+| [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Errore nella creazione del report, contattare il team di sviluppo |
 
-**Codice** : `200 OK`
 
-**Contenuto** : In this example, the User can see three Accounts as AccountAdmin
-`AA`, Viewer `VV`, and Owner `OO` - in that order:
-
-```json
-[
-    {
-        "account": {
-            "id": 123,
-            "name": "Lots of Admins Project",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/123/"
-        },
-        "permission": "AA"
-    },
-    {
-        "account": {
-            "id": 234,
-            "name": "Feel free to View this",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/234/"
-        },
-        "permission": "VV"
-    },
-    {
-        "account": {
-            "id": 345,
-            "name": "Mr Owner Project",
-            "enterprise": false,
-            "url": "http://testserver/api/accounts/345/"
-        },
-        "permission": "OO"
-    }
-]
-```

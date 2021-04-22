@@ -40,8 +40,7 @@ campo `Authorization` dell'header
 }
 ```
 
-## Risposte
-### Login effettuato
+## Messaggi di successo
 Login effettuato con successo, viene ritornato un token
 
 **Codice** : `200 OK`
@@ -59,11 +58,11 @@ Login effettuato con successo, viene ritornato un token
    }
 }
 ```
-### Errori
+## Messaggi di errore
 
-| Codice | Motivazione                     |
-|:-------|:--------------------------------|
-| 400    | Account inesistente o eliminato |
+| Codice                                                              | Motivazione                     |
+|:--------------------------------------------------------------------|:--------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Account inesistente o eliminato |
 
 
 # Account info
@@ -77,8 +76,7 @@ Ritorna all'utente le proprie informazioni non confidenziali, quali username e p
 
 **Permessi richiesti** : Nessuno
 
-## Risposte
-### Dati recuperati
+## Messaggi di successo
 I dati dell'utente sono stati recuperati con successo
 
 **Codice** : `200 OK`
@@ -93,12 +91,11 @@ I dati dell'utente sono stati recuperati con successo
 }
 ```
 
-### Errori
+## Messaggi di errore
 
-| Codice | Motivazione                     |
-|:-------|:--------------------------------|
-| 404    | Account inesistente o eliminato |
-
+| Codice                                                              | Motivazione                     |
+|:--------------------------------------------------------------------|:--------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Account inesistente o eliminato |
 
 # Logout
 Se valido, elimina il token richiedente
@@ -111,16 +108,25 @@ Se valido, elimina il token richiedente
 
 **Permessi richiesti** : Nessuno
 
-## Risposte
-### Successo
+## Messaggi di successo
 
 **Codice** : `200 OK`
 
-### Errori
+**Contenuto** : 
+```json
+{
+    "id": "string",
+    "expiryDate": "2021-04-22T10:26:39.549Z",
+    "username": "string"
+}
 
-| Codice | Motivazione                     |
-|:-------|:--------------------------------|
-| 404    | Account inesistente o eliminato |
+```
+
+## Messaggi di errore
+
+| Codice                                                              | Motivazione                     |
+|:--------------------------------------------------------------------|:--------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Account inesistente o eliminato |
 
 ## Note
 
