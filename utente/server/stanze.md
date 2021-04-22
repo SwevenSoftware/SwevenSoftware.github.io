@@ -7,6 +7,15 @@ grand_parent: Manuale Utente
 # Stanze
 Di seguito vengono riportate le API esposte dal server per la gestione delle stanze
 
+<details open markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Nuova stanza
 Crea una stanza secondo i dati forniti in input
 
@@ -18,7 +27,8 @@ Crea una stanza secondo i dati forniti in input
 
 **Permessi richiesti** : ADMIN
 
-**Dati**
+**Dati**:
+
 `openingAt` e `closingAt` vanno inseriti nel formato `HH:mm`, 
 mentre `width` e `height` devono essere almeno 1, definiscono 
 la larghezza e altezza della stanza, indicano quindi una griglia 
@@ -63,7 +73,8 @@ Crea una stanza secondo i dati forniti in input
 
 **Permessi richiesti** : ADMIN
 
-**Dati**
+**Dati**:
+
 x e y devono essere >= 1 e <= delle dimensioni della stanza
 ```json
 [
@@ -102,7 +113,8 @@ Permette ad un admin di modificare i dati di una stanza
 
 **Permessi richiesti** : ADMIN
 
-**Dati**
+**Dati**:
+
 Valgono gli stessi vincoli imposti per la [creazione di una stanza](#nuova-stanza)
 
 ```json
@@ -133,7 +145,10 @@ Valgono gli stessi vincoli imposti per la [creazione di una stanza](#nuova-stanz
 
 # Modifica Postazione
 
-Permette all'amministratore la modifica di una postazione
+Permette all'amministratore di modificare la posizione della postazione
+nella griglia senza modificarne l'id e quindi  mantenendo le prenotazioni
+ad essa associate.
+
 
 **URL** : `/api/rooms/{roomName}/desks`
 
@@ -143,10 +158,7 @@ Permette all'amministratore la modifica di una postazione
 
 **Permessi richiesti** : ADMIN
 
-**Dati**
-Permette di modificare la posizione della postazione nella
-griglia senza modificarne l'id e quindi  mantenendo le prenotazioni
-ad essa associate.
+**Dati**:
 
 ```json
 {
@@ -435,7 +447,8 @@ database.
 
 **Permessi richiesti** : ADMIN
 
-**Dati** : 
+**Dati**:
+
 ```json
 {
     "id": "string",
