@@ -4,78 +4,52 @@ title: Utenti
 parent: Server
 grand_parent: Manuale Utente
 ---
-# Create User's Account
+# Nuovo account
+L'amministratore può creare un nuovo account fornendo le informazioni necessarie
 
-Create an Account for the authenticated User if an Account for that User does
-not already exist. Each User can only have one Account.
-
-**URL** : `/api/accounts/`
+**URL** : `/api/users/`
 
 **Metodo** : `POST`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : ADMIN
 
-**Dati constraints**
-
-Provide name of Account to be created.
-
+**Dati**
 ```json
 {
-    "name": "[unicode 64 chars max]"
-}
-```
-
-**Dati example** All fields must be sent.
-
-```json
-{
-    "name": "Build something project dot com"
+    "username": "string",
+    "password": "string",
+    "authorities": [
+	"ADMIN", "USER", "CLEANER"
+    ]
 }
 ```
 
 ## Messaggi di successo
 
-**Condizione** : If everything is OK and an Account didn't exist for this User.
+**Condizione** : I dati in input sono validi e il nuovo account è stato creato
 
-**Codice** : `201 CREATED`
+**Codice** : `200 OK`
 
 **Contenuto**
-
+Ritorna le informazioni non sensibili dell'account appena creato
 ```json
 {
-    "id": 123,
-    "name": "Build something project dot com",
-    "url": "http://testserver/api/accounts/123/"
+    "username": "string",
+    "authorities": [
+	"ADMIN", ...
+    ]
 }
 ```
 
 ## Messaggi di errore
 
-**Condizione** : If Account already exists for User.
-
-**Codice** : `303 SEE OTHER`
-
-**Headers** : `Location: http://testserver/api/accounts/123/`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : If fields are missed.
-
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto**
-
-```json
-{
-    "name": [
-        "This field is required."
-    ]
-}
-```
+| Codice                                                              | Motivazione              |
+|:--------------------------------------------------------------------|:-------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Dati in input non validi |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Permessi insufficenti    |
+| [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Username già presente    |
 
 # Lista utenti
 
@@ -88,7 +62,7 @@ ognuno col proprio username e i permessi.
 
 **Autenticazione richiesta** : SI
 
-**Permessi richiesti** : Amministratore
+**Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
 
@@ -98,29 +72,38 @@ ognuno col proprio username e i permessi.
 
 
 ```json
-{
-    "content": [
-	{
-	    "username": "user",
-	    "authorities": [ "USER" ]
-	}
-    ]
-}
+[
+    {
+	"username": "user",
+	"authorities": [ 
+		"USER"
+	]
+    },
+    ...
+]
 ```
 
-# Modifica utente amministratore
+## Messaggi di errore
 
-L'amministratore è in grado di modificare le informazioni di un acccount, ovvero username, password e credenziali
+| Codice                                                              | Motivazione              |
+|:--------------------------------------------------------------------|:-------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Dati in input non validi |
+| [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Username già presente    |
+
+
+# Modifica utente
+
+permette all'amministratore di modificare le informazioni di un acccount, ovvero username, password e credenziali
 
 **URL** : `/api/users/{username}`
 
 **Metodo** : `PUT`
 
-**Parametri URL** : `{username}=[String]` lo username dell'account da eliminare
+**Parametri URL** : `{username}` lo username dell'account da eliminare
 
 **Autenticazione richiesta** : SI
 
-**Permessi richiesti** : Amministratore
+**Permessi richiesti** : ADMIN
 
 **Dati constraints**
 
@@ -129,7 +112,7 @@ L'amministratore è in grado di modificare le informazioni di un acccount, ovver
     "username": "user",
     "password": "password",
     "authorities": [
-	"USER", "ADMIN"
+	"USER", ...
     ]
 }
 ```
@@ -151,42 +134,29 @@ L'amministratore è in grado di modificare le informazioni di un acccount, ovver
 }
 ```
 
-## Error Response
+## Messaggi di errore
 
-**Condizione** : If provided data is invalid, e.g. a name field is too long.
+| Codice                                                              | Motivazione               |
+|:--------------------------------------------------------------------|:--------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Dati in input non validi  |
+| [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) | Autorizzazione non valida |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Permessi insufficenti     |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | Username non trovato      |
 
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto** :
-
-```json
-{
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
-    ]
-}
-```
-
-## Note
-
-* Endpoint will ignore irrelevant and read-only data such as parameters that
-  don't exist, or fields that are not editable like `id` or `email`.
-* Similar to the `GET` endpoint for the User, if the User does not have a
-  UserInfo instance, then one will be created for them.
 
 # Eliminazione account utente
 
-Elimina l'account utente selezionato.
+Elimina l'account utente indicato
 
 **URL** : `/api/users/user/{username}`
 
-**Parametri URL** : `{username}=[String]` lo username dell'account da eliminare
+**Parametri URL** : `{username}` lo username dell'account da eliminare
 
 **Metodo** : `DELETE`
 
 **Autenticazione richiesta** : SI
 
-**Permessi richiesti** : Il richiedente deve essere amministratore
+**Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
 
@@ -206,21 +176,10 @@ Elimina l'account utente selezionato.
 
 ## Messaggi di errore
 
-**Condizione** : If there was no Account available to delete.
-
-**Codice** : `404 NOT FOUND`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : Authorized User is not Owner of Account at URL.
-
-**Codice** : `403 FORBIDDEN`
-
-**Contenuto** : `{}`
+| Codice                                                              | Motivazione               |
+|:--------------------------------------------------------------------|:--------------------------|
+| [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) | Autorizzazione non valida |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Permessi insufficenti     |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | Username non trovato      |
 
 
-## Note
-
-* Will remove memberships for this Account for all Users that had access.
