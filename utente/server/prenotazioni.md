@@ -87,7 +87,7 @@ Indicare postazione, timestamp di inizio e fine prenotazione. Tutti i campi vann
 
 **Codice** : `200 OK`
 
-**Contenuto example**
+**Contenuto**
 
 ```json
 {

@@ -41,7 +41,7 @@ Provide name of Account to be created.
 
 **Codice** : `201 CREATED`
 
-**Contenuto example**
+**Contenuto**
 
 ```json
 {
@@ -67,7 +67,7 @@ Provide name of Account to be created.
 
 **Codice** : `400 BAD REQUEST`
 
-**Contenuto example**
+**Contenuto**
 
 ```json
 {
@@ -157,7 +157,7 @@ L'amministratore è in grado di modificare le informazioni di un acccount, ovver
 
 **Codice** : `400 BAD REQUEST`
 
-**Contenuto example** :
+**Contenuto** :
 
 ```json
 {

@@ -8,683 +8,462 @@ grand_parent: Manuale Utente
 Di seguito vengono riportate le API esposte dal server per la gestione delle stanze
 
 # Nuova stanza
+Crea una stanza secondo i dati forniti in input
 
-Create an Account for the authenticated User if an Account for that User does
-not already exist. Each User can only have one Account.
-
-**URL** : `/api/accounts/`
+**URL** : `/api/rooms/`
 
 **Metodo** : `POST`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : ADMIN
 
-**Dati constraints**
-
-Provide name of Account to be created.
-
+**Dati**
+`openingAt` e `closingAt` vanno inseriti nel formato `HH:mm`, 
+mentre `width` e `height` devono essere almeno 1, definiscono 
+la larghezza e altezza della stanza, indicano quindi una griglia 
+dove è possibile posizionare delle postazioni
 ```json
 {
-    "name": "[unicode 64 chars max]"
+    "name": "string",
+    "openingAt": "time",
+    "closingAt": "time",
+    "openingDays": [
+	"MONDAY", ...
+    ],
+    "width": int,
+    "height": int
 }
 ```
-
-**Dati example** All fields must be sent.
-
-```json
-{
-    "name": "Build something project dot com"
-}
-```
-
 ## Messaggi di successo
 
-**Condizione** : If everything is OK and an Account didn't exist for this User.
-
-**Codice** : `201 CREATED`
-
-**Contenuto example**
-
-```json
-{
-    "id": 123,
-    "name": "Build something project dot com",
-    "url": "http://testserver/api/accounts/123/"
-}
-```
-
-## Messaggi di errore
-
-**Condizione** : If Account already exists for User.
-
-**Codice** : `303 SEE OTHER`
-
-**Headers** : `Location: http://testserver/api/accounts/123/`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : If fields are missed.
-
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto example**
-
-```json
-{
-    "name": [
-        "This field is required."
-    ]
-}
-```
-
-# Nuova postazione
-
-Create an Account for the authenticated User if an Account for that User does
-not already exist. Each User can only have one Account.
-
-**URL** : `/api/accounts/`
-
-**Metodo** : `POST`
-
-**Autenticazione richiesta** : YES
-
-**Permessi richiesti** : None
-
-**Dati constraints**
-
-Provide name of Account to be created.
-
-```json
-{
-    "name": "[unicode 64 chars max]"
-}
-```
-
-**Dati example** All fields must be sent.
-
-```json
-{
-    "name": "Build something project dot com"
-}
-```
-
-## Messaggi di successo
-
-**Condizione** : If everything is OK and an Account didn't exist for this User.
-
-**Codice** : `201 CREATED`
-
-**Contenuto example**
-
-```json
-{
-    "id": 123,
-    "name": "Build something project dot com",
-    "url": "http://testserver/api/accounts/123/"
-}
-```
-
-## Messaggi di errore
-
-**Condizione** : If Account already exists for User.
-
-**Codice** : `303 SEE OTHER`
-
-**Headers** : `Location: http://testserver/api/accounts/123/`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : If fields are missed.
-
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto example**
-
-```json
-{
-    "name": [
-        "This field is required."
-    ]
-}
-```
-
-# Modifica Stanza
-
-Allow the Authenticated User to update their details.
-
-**URL** : `/api/user/`
-
-**Metodo** : `PUT`
-
-**Autenticazione richiesta** : YES
-
-**Permessi richiesti** : None
-
-**Dati constraints**
-
-```json
-{
-    "first_name": "[1 to 30 chars]",
-    "last_name": "[1 to 30 chars]"
-}
-```
-
-Note that `id` and `email` are currently read only fields.
-
-**Header constraints**
-
-The application used to update the User's information can be sent in the
-header. Values passed in the `UAPP` header only pass basic checks for validity:
-
-- If 0 characters, or not provided, ignore.
-- If 1 to 8 characters, save.
-- If longer than 8 characters, ignore.
-
-```
-UAPP: [1 to 8 chars]
-```
-
-**Dati examples**
-
-Partial data is allowed.
-
-```json
-{
-    "first_name": "John"
-}
-```
-
-Empty data can be PUT to erase the name, in this case from the iOS application
-version 1.2:
-
-```
-UAPP: ios1_2
-```
-
-```json
-{
-    "last_name": ""
-}
-```
-
-## Messaggi di successos
-
-**Condizione** : Dati provided is valid and User is Authenticated.
+**Condizione** : I dati in input sono validi, la stanza è stata creata
 
 **Codice** : `200 OK`
 
-**Contenuto example** : Response will reflect back the updated information. A
-User with `id` of '1234' sets their name, passing `UAPP` header of 'ios1_2':
+## Messaggi di errore
+
+
+| Codice                                                              | Motivazione                     |
+|:--------------------------------------------------------------------|:--------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Account inesistente o eliminato |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti     |
+
+
+# Nuova postazione
+Crea una stanza secondo i dati forniti in input
+
+**URL** : `/api/rooms/{roomName}/desks`
+
+**Parametri URL** : `{roomName}`, il nome della stanza dove si vogliono inserire delle postazioni
+
+**Metodo** : `POST`
+
+**Autenticazione richiesta** : SI
+
+**Permessi richiesti** : ADMIN
+
+**Dati**
+x e y devono essere >= 1 e <= delle dimensioni della stanza
+```json
+[
+    {
+	"x": int,
+	"y": int
+    },
+    
+    ...
+]
+```
+è possibile fornire un numero qualsiasi di postazioni in input, purchè stiano all'interno della stanza
+
+## Messaggi di successo
+
+**Condizione** : I dati in input sono validi, le postazioni sono state inserite nella stanza
+
+**Codice** : `200 OK`
+
+## Messaggi di errore
+
+| Codice                                                              | Motivazione                     |
+|:--------------------------------------------------------------------|:--------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Account inesistente o eliminato |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti     |
+	
+# Modifica Stanza
+
+Permette ad un admin di modificare i dati di una stanza
+
+**URL** : `/api/rooms/{roomName}`
+
+**Metodo** : `PUT`
+
+**Autenticazione richiesta** : SI
+
+**Permessi richiesti** : ADMIN
+
+**Dati**
+Valgono gli stessi vincoli imposti per la [creazione di una stanza](#nuova-stanza)
 
 ```json
 {
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com",
-    "uapp": "ios1_2"
+  "name": "string",
+  "openingAt": "time",
+  "closingAt": "time",
+  "openingDays": [
+      "MONDAY", ...
+  ],
+  "width": int,
+  "height": int
 }
 ```
 
-## Error Response
+## Messaggi di successo
 
-**Condizione** : If provided data is invalid, e.g. a name field is too long.
+**Condizione** : I dati in input sono validi e la stanza è stata modificata
 
-**Codice** : `400 BAD REQUEST`
+**Codice** : `200 OK`
 
-**Contenuto example** :
+## Messaggi di errore
 
-```json
-{
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
-    ]
-}
-```
-
-## Note
-
-* Endpoint will ignore irrelevant and read-only data such as parameters that
-  don't exist, or fields that are not editable like `id` or `email`.
-* Similar to the `GET` endpoint for the User, if the User does not have a
-  UserInfo instance, then one will be created for them.
+| Codice                                                              | Motivazione                   |
+|:--------------------------------------------------------------------|:------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
 
 # Modifica Postazione
 
-Allow the Authenticated User to update their details.
+Permette all'amministratore la modifica di una postazione
 
-**URL** : `/api/user/`
+**URL** : `/api/rooms/{roomName}/desks`
 
 **Metodo** : `PUT`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : ADMIN
 
-**Dati constraints**
-
-```json
-{
-    "first_name": "[1 to 30 chars]",
-    "last_name": "[1 to 30 chars]"
-}
-```
-
-Note that `id` and `email` are currently read only fields.
-
-**Header constraints**
-
-The application used to update the User's information can be sent in the
-header. Values passed in the `UAPP` header only pass basic checks for validity:
-
-- If 0 characters, or not provided, ignore.
-- If 1 to 8 characters, save.
-- If longer than 8 characters, ignore.
-
-```
-UAPP: [1 to 8 chars]
-```
-
-**Dati examples**
-
-Partial data is allowed.
+**Dati**
+Permette di modificare la posizione della postazione nella
+griglia senza modificarne l'id e quindi  mantenendo le prenotazioni
+ad essa associate.
 
 ```json
 {
-    "first_name": "John"
+    "oldInfo": {
+	"x": int,
+	"y": int
+    },
+    "newInfo": {
+	"x": int,
+	"y": int
+    }
 }
-```
-
-Empty data can be PUT to erase the name, in this case from the iOS application
-version 1.2:
 
 ```
-UAPP: ios1_2
-```
 
-```json
-{
-    "last_name": ""
-}
-```
+## Messaggi di successo
 
-## Messaggi di successos
-
-**Condizione** : Dati provided is valid and User is Authenticated.
+**Condizione** : La postazione è stata spostata nella nuova sede
 
 **Codice** : `200 OK`
 
-**Contenuto example** : Response will reflect back the updated information. A
-User with `id` of '1234' sets their name, passing `UAPP` header of 'ios1_2':
-
+**Contenuto** :
 ```json
 {
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com",
-    "uapp": "ios1_2"
+    "roomName": "string",
+    "deskId": "string",
+    "x": int,
+    "y": int
 }
 ```
 
-## Error Response
+## Messaggi di errore
 
-**Condizione** : If provided data is invalid, e.g. a name field is too long.
-
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto example** :
-
-```json
-{
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
-    ]
-}
-```
-
-## Note
-
-* Endpoint will ignore irrelevant and read-only data such as parameters that
-  don't exist, or fields that are not editable like `id` or `email`.
-* Similar to the `GET` endpoint for the User, if the User does not have a
-  UserInfo instance, then one will be created for them.
+| Codice                                                              | Motivazione                   |
+|:--------------------------------------------------------------------|:------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
 
 # Lista stanze
+Permette a tutti gli utenti di visualizzare una lista con le stanze attualmente presenti
 
-Get the details of the currently Authenticated User along with basic
-subscription information.
-
-**URL** : `/api/user/`
+**URL** : `/api/rooms/`
 
 **Metodo** : `GET`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
 
 **Codice** : `200 OK`
 
-**Contenuto examples**
-
-For a User with ID 1234 on the local database where that User has saved an
-email address and name information.
+**Contenuto**
 
 ```json
-{
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com"
-}
+[
+    {
+	"room": {
+            "name": "string",
+            "closed": boolean,
+            "openingTime": "time",
+            "closingTime": "time",
+            "openingDays": [
+		"MONDAY", ...
+            ],
+            "width": int,
+            "height": int,
+            "roomStatus": "CLEAN"
+	},
+	"desks": [
+            {
+		"deskId": "string",
+		"x": int,
+		"y": int,
+		"available": boolean
+            },
+	    ...
+	],
+     },
+
+    // altra room con altri desks
+    ...
+]
 ```
-
-For a user with ID 4321 on the local database but no details have been set yet.
-
-```json
-{
-    "id": 4321,
-    "first_name": "",
-    "last_name": "",
-    "email": ""
-}
-```
-
-## Note
-
-* If the User does not have a `UserInfo` instance when requested then one will
-  be created for them.
 
 # Informazioni Stanza
+Permette a tutti di recuperare le informazioni su una particolare stanza
 
-Get the details of the currently Authenticated User along with basic
-subscription information.
-
-**URL** : `/api/user/`
+**URL** : `/api/rooms/{roomName}`
 
 **Metodo** : `GET`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
 
 **Codice** : `200 OK`
 
-**Contenuto examples**
-
-For a User with ID 1234 on the local database where that User has saved an
-email address and name information.
-
+**Contenuto**
 ```json
 {
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com"
+    "room": {
+	"name": "string",
+	"closed": boolean,
+	"openingTime": "time",
+	"closingTime": "time",
+	"openingDays": [
+	    "MONDAY", ...
+	],
+	"width": int,
+	"height": int,
+	"roomStatus": "CLEAN"
+    },
+    "desks": [
+	{
+	    "deskId": "string",
+	    "x": 0,
+	    "y": 0,
+	    "available": true
+	},
+	...
+    ]
 }
+
 ```
-
-For a user with ID 4321 on the local database but no details have been set yet.
-
-```json
-{
-    "id": 4321,
-    "first_name": "",
-    "last_name": "",
-    "email": ""
-}
-```
-
-## Note
-
-* If the User does not have a `UserInfo` instance when requested then one will
-  be created for them.
 
 # Stato postazione
+Permette di recuperare le informazioni sullo stato di una postazione
 
-Get the details of the currently Authenticated User along with basic
-subscription information.
+**URL** : `/api/rooms/desks/{deskID}`
 
-**URL** : `/api/user/`
+**Parametri URL** : `{deskID}` id della postazione della quale si vogliono recuperare i dati
 
 **Metodo** : `GET`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
 
 **Codice** : `200 OK`
 
-**Contenuto examples**
-
-For a User with ID 1234 on the local database where that User has saved an
-email address and name information.
-
+**Contenuto**
 ```json
 {
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com"
+    "id": "string",
+    "x": 0,
+    "y": 0,
+    "roomId": "string",
+    "deskStatus": "CLEAN"
+}{
+    "id": "string",
+    "x": 0,
+    "y": 0,
+    "roomId": "string",
+    "deskStatus": "CLEAN"
 }
+
 ```
 
-For a user with ID 4321 on the local database but no details have been set yet.
+# Pulizia stanza
+Permette ad un addetto alle pulizie di marcare una stanza come pulita
 
-```json
-{
-    "id": 4321,
-    "first_name": "",
-    "last_name": "",
-    "email": ""
-}
-```
+**URL** : `/api/rooms/{roomName}/clean`
 
-## Note
-
-* If the User does not have a `UserInfo` instance when requested then one will
-  be created for them.
-
-# Pulizia postazione
-
-Allow the Authenticated User to update their details.
-
-**URL** : `/api/user/`
+**Parametri URL** : `{roomName}` nome della stanza da marcare come pulita
 
 **Metodo** : `PUT`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : None
+**Permessi richiesti** : CLEANER
 
-**Dati constraints**
+## Messaggi di successo
 
-```json
-{
-    "first_name": "[1 to 30 chars]",
-    "last_name": "[1 to 30 chars]"
-}
-```
-
-Note that `id` and `email` are currently read only fields.
-
-**Header constraints**
-
-The application used to update the User's information can be sent in the
-header. Values passed in the `UAPP` header only pass basic checks for validity:
-
-- If 0 characters, or not provided, ignore.
-- If 1 to 8 characters, save.
-- If longer than 8 characters, ignore.
-
-```
-UAPP: [1 to 8 chars]
-```
-
-**Dati examples**
-
-Partial data is allowed.
-
-```json
-{
-    "first_name": "John"
-}
-```
-
-Empty data can be PUT to erase the name, in this case from the iOS application
-version 1.2:
-
-```
-UAPP: ios1_2
-```
-
-```json
-{
-    "last_name": ""
-}
-```
-
-## Messaggi di successos
-
-**Condizione** : Dati provided is valid and User is Authenticated.
+**Condizione** : La stanza esiste ed è stata segnata come pulita
 
 **Codice** : `200 OK`
 
-**Contenuto example** : Response will reflect back the updated information. A
-User with `id` of '1234' sets their name, passing `UAPP` header of 'ios1_2':
-
+**Contenuto** : 
+Il ritorno sono i dati della stanza, soprattutto il campo `roomStatus` per verificare che sia `CLEAN`
 ```json
 {
-    "id": 1234,
-    "first_name": "Joe",
-    "last_name": "Bloggs",
-    "email": "joe25@example.com",
-    "uapp": "ios1_2"
-}
-```
-
-## Error Response
-
-**Condizione** : If provided data is invalid, e.g. a name field is too long.
-
-**Codice** : `400 BAD REQUEST`
-
-**Contenuto example** :
-
-```json
-{
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
+    "room": {
+	"name": "string",
+	"closed": boolean,
+	"openingTime": "time",
+	"closingTime": "time",
+	"openingDays": [
+	    "MONDAY", ...
+	],
+	"width": int,
+	"height": int,
+	"roomStatus": "CLEAN"
+    },
+    "desks": [
+	{
+	    "deskId": "string",
+	    "x": 0,
+	    "y": 0,
+	    "available": true
+	},
+	...
     ]
 }
 ```
 
-## Note
+## Messaggi di errore
 
-* Endpoint will ignore irrelevant and read-only data such as parameters that
-  don't exist, or fields that are not editable like `id` or `email`.
-* Similar to the `GET` endpoint for the User, if the User does not have a
-  UserInfo instance, then one will be created for them.
+| Codice                                                              | Motivazione                   |
+|:--------------------------------------------------------------------|:------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
 
 # Eliminazione stanza
 
-Delete the Account of the Authenticated User if they are Owner.
+Permette all'amministratore di eliminare una stanza
 
-**URL** : `/api/accounts/:pk/`
+**URL** : `/api/rooms/{roomName}`
+
+**Parametri URL** : `{roomName}` nome della stanza da eliminare.
+
+**Metodo** : `DELETE`
+
+**Autenticazione richiesta** : SI
+
+**Permessi richiesti** : ADMIN
+
+## Messaggi di successo
+
+**Condizione** : La stanza deve esistere.
+
+**Codice** : `200 OK`
+
+**Contenuto** : 
+Il ritorno sono le informazioni della stanza eliminata:
+```json
+{
+    "room": {
+	"name": "string",
+	"closed": boolean,
+	"openingTime": "time",
+	"closingTime": "time",
+	"openingDays": [
+	    "MONDAY", ...
+	],
+	"width": int,
+	"height": int,
+	"roomStatus": "CLEAN"
+    },
+    "desks": [
+	{
+	    "deskId": "string",
+	    "x": 0,
+	    "y": 0,
+	    "available": true
+	},
+	...
+    ]
+}
+
+```
+
+## Messaggi di errore
+
+| Codice                                                              | Motivazione                   |
+|:--------------------------------------------------------------------|:------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
+
+# Eliminazione postazione
+Consente all'amministratore di eliminare una postazione
+
+**URL** : `/api/rooms/{roomName}/desks`
 
 **Parametri URL** : `pk=[integer]` where `pk` is the ID of the Account in the
 database.
 
 **Metodo** : `DELETE`
 
-**Autenticazione richiesta** : YES
+**Autenticazione richiesta** : SI
 
-**Permessi richiesti** : User is Account Owner
+**Permessi richiesti** : ADMIN
 
-**Dati** : `{}`
+**Dati** : 
+```json
+{
+    "id": "string",
+    "x": int,
+    "y": int
+}
 
-## Messaggi di successo
-
-**Condizione** : If the Account exists.
-
-**Codice** : `204 NO CONTENT`
-
-**Contenuto** : `{}`
-
-## Messaggi di errore
-
-**Condizione** : If there was no Account available to delete.
-
-**Codice** : `404 NOT FOUND`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : Authorized User is not Owner of Account at URL.
-
-**Codice** : `403 FORBIDDEN`
-
-**Contenuto** : `{}`
-
-
-## Note
-
-* Will remove memberships for this Account for all Users that had access.
-
-# Eliminazione ppostazione
-
-Delete the Account of the Authenticated User if they are Owner.
-
-**URL** : `/api/accounts/:pk/`
-
-**Parametri URL** : `pk=[integer]` where `pk` is the ID of the Account in the
-database.
-
-**Metodo** : `DELETE`
-
-**Autenticazione richiesta** : YES
-
-**Permessi richiesti** : User is Account Owner
-
-**Dati** : `{}`
+```
 
 ## Messaggi di successo
 
-**Condizione** : If the Account exists.
+**Condizione** : La postazione esiste
 
-**Codice** : `204 NO CONTENT`
+**Codice** : `200 OK`
 
-**Contenuto** : `{}`
+**Contenuto** : 
+```json
+{
+    "roomName": "string",
+    "deskId": "string",
+    "x": int,
+    "y": int
+}
+```
 
 ## Messaggi di errore
 
-**Condizione** : If there was no Account available to delete.
-
-**Codice** : `404 NOT FOUND`
-
-**Contenuto** : `{}`
-
-### Or
-
-**Condizione** : Authorized User is not Owner of Account at URL.
-
-**Codice** : `403 FORBIDDEN`
-
-**Contenuto** : `{}`
-
-
-## Note
-
-* Will remove memberships for this Account for all Users that had access.
+| Codice                                                              | Motivazione                   |
+|:--------------------------------------------------------------------|:------------------------------|
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
