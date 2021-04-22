@@ -32,6 +32,7 @@ sanificazione delle stanze che gli verrà fornito in formato pdf.
 **Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : Report creato con successo
 
@@ -40,6 +41,7 @@ sanificazione delle stanze che gli verrà fornito in formato pdf.
 **Contenuto** : documento pdf
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                                                       |
 |:--------------------------------------------------------------------|:------------------------------------------------------------------|

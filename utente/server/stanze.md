@@ -46,12 +46,14 @@ dove è possibile posizionare delle postazioni
 }
 ```
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : I dati in input sono validi, la stanza è stata creata
 
 **Codice** : `200 OK`
 
 ## Messaggi di errore
+{: .no_toc}
 
 
 | Codice                                                              | Motivazione                     |
@@ -89,12 +91,14 @@ x e y devono essere >= 1 e <= delle dimensioni della stanza
 è possibile fornire un numero qualsiasi di postazioni in input, purchè stiano all'interno della stanza
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : I dati in input sono validi, le postazioni sono state inserite nella stanza
 
 **Codice** : `200 OK`
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                     |
 |:--------------------------------------------------------------------|:--------------------------------|
@@ -131,12 +135,14 @@ Valgono gli stessi vincoli imposti per la [creazione di una stanza](#nuova-stanz
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : I dati in input sono validi e la stanza è stata modificata
 
 **Codice** : `200 OK`
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                   |
 |:--------------------------------------------------------------------|:------------------------------|
@@ -175,6 +181,7 @@ ad essa associate.
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La postazione è stata spostata nella nuova sede
 
@@ -191,6 +198,7 @@ ad essa associate.
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                   |
 |:--------------------------------------------------------------------|:------------------------------|
@@ -209,6 +217,7 @@ Permette a tutti gli utenti di visualizzare una lista con le stanze attualmente 
 **Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -257,6 +266,7 @@ Permette a tutti di recuperare le informazioni su una particolare stanza
 **Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -302,6 +312,7 @@ Permette di recuperare le informazioni sullo stato di una postazione
 **Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -337,6 +348,7 @@ Permette ad un addetto alle pulizie di marcare una stanza come pulita
 **Permessi richiesti** : CLEANER
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La stanza esiste ed è stata segnata come pulita
 
@@ -371,6 +383,7 @@ Il ritorno sono i dati della stanza, soprattutto il campo `roomStatus` per verif
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                   |
 |:--------------------------------------------------------------------|:------------------------------|
@@ -392,6 +405,7 @@ Permette all'amministratore di eliminare una stanza
 **Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La stanza deve esistere.
 
@@ -427,6 +441,7 @@ Il ritorno sono le informazioni della stanza eliminata:
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                   |
 |:--------------------------------------------------------------------|:------------------------------|
@@ -459,6 +474,7 @@ database.
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La postazione esiste
 
@@ -475,6 +491,7 @@ database.
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                   |
 |:--------------------------------------------------------------------|:------------------------------|

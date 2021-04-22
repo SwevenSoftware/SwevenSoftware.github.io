@@ -4,6 +4,19 @@ title: Utenti
 parent: Server
 grand_parent: Manuale Utente
 ---
+# Utenti
+{: .no_toc }
+Di seguito vengono riportate le API per la gestione da parte dell'amministratore degli account utente e addetto alle pulizie
+
+<details open markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Nuovo account
 L'amministratore può creare un nuovo account fornendo le informazioni necessarie
 
@@ -27,6 +40,7 @@ L'amministratore può creare un nuovo account fornendo le informazioni necessari
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : I dati in input sono validi e il nuovo account è stato creato
 
@@ -44,6 +58,7 @@ Ritorna le informazioni non sensibili dell'account appena creato
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione              |
 |:--------------------------------------------------------------------|:-------------------------|
@@ -65,6 +80,7 @@ ognuno col proprio username e i permessi.
 **Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -84,11 +100,13 @@ ognuno col proprio username e i permessi.
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
-| Codice                                                              | Motivazione              |
-|:--------------------------------------------------------------------|:-------------------------|
-| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Dati in input non validi |
-| [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Username già presente    |
+| Codice                                                              | Motivazione               |
+|:--------------------------------------------------------------------|:--------------------------|
+| [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) | Autorizzazione non valida |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Permessi insuffienti      |
+| [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Username già presente     |
 
 
 # Modifica utente
@@ -118,6 +136,7 @@ permette all'amministratore di modificare le informazioni di un acccount, ovvero
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : Dati inviati validi e utente presente
 
@@ -135,6 +154,7 @@ permette all'amministratore di modificare le informazioni di un acccount, ovvero
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione               |
 |:--------------------------------------------------------------------|:--------------------------|
@@ -159,6 +179,7 @@ Elimina l'account utente indicato
 **Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : Se l'account esiste può essere eliminato
 
@@ -175,6 +196,7 @@ Elimina l'account utente indicato
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione               |
 |:--------------------------------------------------------------------|:--------------------------|

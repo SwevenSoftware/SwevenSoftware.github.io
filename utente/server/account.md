@@ -41,6 +41,7 @@ campo `Authorization` dell'header
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 Login effettuato con successo, viene ritornato un token
 
 **Codice** : `200 OK`
@@ -59,6 +60,7 @@ Login effettuato con successo, viene ritornato un token
 }
 ```
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                     |
 |:--------------------------------------------------------------------|:--------------------------------|
@@ -77,6 +79,7 @@ Ritorna all'utente le proprie informazioni non confidenziali, quali username e p
 **Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
+{: .no_toc}
 I dati dell'utente sono stati recuperati con successo
 
 **Codice** : `200 OK`
@@ -92,6 +95,7 @@ I dati dell'utente sono stati recuperati con successo
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                     |
 |:--------------------------------------------------------------------|:--------------------------------|
@@ -109,6 +113,7 @@ Se valido, elimina il token richiedente
 **Permessi richiesti** : Nessuno
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -123,6 +128,7 @@ Se valido, elimina il token richiedente
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                     |
 |:--------------------------------------------------------------------|:--------------------------------|

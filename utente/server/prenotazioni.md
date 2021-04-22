@@ -6,6 +6,7 @@ grand_parent: Manuale Utente
 ---
 
 # Prenotazioni
+{: .no_toc}
 Di seguito vengono riportate le API che permettono le gestione delle prenotazioni
 
 <details open markdown="block">
@@ -36,6 +37,7 @@ occupata).
 **Permessi richiesti** : USER
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -49,6 +51,7 @@ Ritorna lo stato corrente e il prossimo cambio
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione            |
 |:--------------------------------------------------------------------|:-----------------------|
@@ -82,6 +85,7 @@ Indicare postazione, timestamp di inizio e fine prenotazione. Tutti i campi vann
 
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La prenotazione è valida ed è stata creata sul server
 
@@ -101,6 +105,7 @@ Indicare postazione, timestamp di inizio e fine prenotazione. Tutti i campi vann
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                                                                    |
 |:--------------------------------------------------------------------|:-------------------------------------------------------------------------------|
@@ -136,6 +141,7 @@ Modifica di una prenotazione già effettuata
 ```
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : I nuovi dati della prenotazione sono validi e
 l'utente richiedente è admin o è lo stesso che ha effettuato la
@@ -157,6 +163,7 @@ prenotazione originariamente
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione                                           |
 |:--------------------------------------------------------------------|:------------------------------------------------------|
@@ -178,6 +185,7 @@ subscription information.
 **Permessi richiesti** : USER
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -199,6 +207,7 @@ subscription information.
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione           |
 |:--------------------------------------------------------------------|:----------------------|
@@ -222,6 +231,7 @@ intervallo temporale
 **Permessi richiesti** : ADMIN
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Codice** : `200 OK`
 
@@ -243,7 +253,8 @@ l'elenco delle prenotazioni attive nel periodo indicato
 ]
 ```
 
-## Messaggi d'errore
+## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione           |
 |:--------------------------------------------------------------------|:----------------------|
@@ -265,6 +276,7 @@ Elimina una prenotazione
 **Permessi richiesti** : USER
 
 ## Messaggi di successo
+{: .no_toc}
 
 **Condizione** : La prenotazione esiste e l'utente che ne ha richiesto la rimozione è lo stesso che l'ha effettuata
 
@@ -283,6 +295,7 @@ Elimina una prenotazione
 ```
 
 ## Messaggi di errore
+{: .no_toc}
 
 | Codice                                                              | Motivazione            |
 |:--------------------------------------------------------------------|:-----------------------|
