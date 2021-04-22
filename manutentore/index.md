@@ -12,7 +12,7 @@ nav_order: 2
 Lo scopo del Manuale per il manutentore è presentare l'architettura del prodotto BlockCovid, l'organizzazione del codice sorgente e tutte le informazioni relative al mantenimento ed estensione del progetto.
 Questo documento ha il fine di illustrare le procedure di installazione e sviluppo, illustrare i framework e le librerie utilizzate, facendo uso di diagrammi UML dei package, classe e di sequenza.
 
-## Scopo del documento
+## Scopo del prodotto
 
 Il prodotto che si vuole sviluppare è BlockCOVID, un'applicazione web e mobile mirata a gestire al meglio la situazione pandemica all'interno di aziende ed aule studio. L'applicazione include al suo interno tre tipi di utenti che utilizzeranno il software, con le loro relative esigenze:
 
