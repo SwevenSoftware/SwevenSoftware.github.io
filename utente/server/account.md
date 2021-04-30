@@ -137,3 +137,54 @@ Se valido, elimina il token richiedente
 ## Note
 
 * Elimina il token corrispondente, non esegue il logout di tutti i dispositivi
+
+
+# Modifica Password
+
+Un utente è in grado di richiedere il cambio della propria password di
+accesso al sistema, fornendo la vecchia password come controllo
+
+**URL** : `/api/account/modify/password`
+
+**Metodo** : `PUT`
+
+**Autenticazione richiesta** : SI
+
+**Permessi richiesti** : USER, ADMIN
+
+**Dati constraints**
+
+```json
+{
+  "old_password": "string",
+  "new_password": "string"
+}
+```
+
+## Messaggi di successo
+{: .no_toc}
+
+**Condizione** : La vecchia password corrisponde e la nuova password è
+valida, la password è stata modificata
+
+**Codice** : `200 OK`
+
+**Contenuto** : 
+```json
+{
+    "username": "string",
+    "authorities": [
+	"USER", "ADMIN", "CLEANER"
+    ]
+}
+```
+
+## Messaggi di errore
+{: .no_toc}
+
+| Codice                                                              | Motivazione                                           |
+|:--------------------------------------------------------------------|:------------------------------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Vecchia password errata o non fornita                 |
+
+## Note
+Il cambio di password non comporta il logout dell'utente
