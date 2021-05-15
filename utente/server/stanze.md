@@ -2,6 +2,7 @@
 layout: page
 title: Stanze
 parent: Server
+nav_order: 3
 grand_parent: Manuale Utente
 ---
 # Stanze

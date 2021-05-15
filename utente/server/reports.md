@@ -2,6 +2,7 @@
 layout: page
 title: Reports
 parent: Server
+nav_order: 5
 grand_parent: Manuale Utente
 ---
 # Reports
