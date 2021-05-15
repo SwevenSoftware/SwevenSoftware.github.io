@@ -188,3 +188,5 @@ valida, la password è stata modificata
 
 ## Note
 Il cambio di password non comporta il logout dell'utente
+
+{% include prev_next.liquid %}

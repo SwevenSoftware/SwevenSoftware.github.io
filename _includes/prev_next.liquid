@@ -1,0 +1,15 @@
+---
+
+{% assign next_nav = page.nav_order | plus: 1 %}
+{% assign prev_nav = page.nav_order | minus: 1 %}
+{% assign next = site.pages | where: "parent", page.parent | where: "grand_parent", page.grand_parent | where: "nav_order", next_nav | first %}
+{% assign prev = site.pages | where: "parent", page.parent | where: "grand_parent", page.grand_parent | where: "nav_order", prev_nav | first %}
+{% if prev != nil %}
+{: .float-left .text-delta }
+[{{ prev.title }}]({{ prev.url}})
+{% endif %}
+{% if next != nil %}
+{: .float-right .mt-0 .text-delta}
+[{{ next.title }}]({{ next.url}})
+{% endif %}
+<br>

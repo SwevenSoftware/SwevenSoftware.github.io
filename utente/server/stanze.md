@@ -497,3 +497,5 @@ database.
 |:--------------------------------------------------------------------|:------------------------------|
 | [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Autorizzazioni insufficenti   |
 | [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | La stanza indicata non esiste |
+
+{% include prev_next.liquid %}
