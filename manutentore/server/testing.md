@@ -22,7 +22,7 @@ nav_order: 4
 
 Gli _unit test_ relativi al server sono all'interno della cartella `src/test/java`.
 
-La [_code-coverage_](/glossario#code-coverage) è misurata mediante [JaCoCo](#jacoco), dalla quale sono escluse le classi di configurazione, poiché più adatte ad un _integration test_.
+La [_code-coverage_](/glossario#code-coverage) è misurata mediante [JaCoCo](/manutentore/server/tecnologie#jacoco), dalla quale sono escluse le classi di configurazione, poiché più adatte ad un _integration test_.
 
 > L'elenco di classi e package esculi dal _code-coverage_ è indicato all'interno del file `build.gradle`
 
