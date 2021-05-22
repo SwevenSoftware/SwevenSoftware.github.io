@@ -39,21 +39,21 @@ Questa legenda mostra 4 icone:
 L'amministratore può aggiungere un nuovo utente tramite il pulsante a croce posto in alto a sinistra.
 Mentre per la modifica dei dati di un utente è stato predisposto un pulsante a forma di matita sopra ogni icona utente.
 Infine l'amministratore può eliminare un utente tramite il pulsante a forma di cestino.
-![](/assets/web/landingPage.jpg)
+![](/assets/web/landingPage.png)
 
 ## Creazione utente
 L'amministratore, dopo aver cliccato sul pulsante di creazione nuovo utente, potrà inserire i nuovi dati tramite una finestra a pop-up.
-![](/assets/web/createUser.jpg)
+![](/assets/web/createUser.png)
 
 ## Modifica dati utente
 L'amministratore, dopo aver cliccato sul pulsante di modifica utente, potrà inserire i nuovi dati tramite una finestra a pop-up.
 
-![](/assets/web/modifyUser.jpg)
+![](/assets/web/modifyUser.png)
 
 ## Eliminazione utente
 L'amministratore, dopo aver cliccato sul pulsante di eliminazione utente, potrà visualizzare dei dati informativi sull'utente e sarà chiesta la conferma di eliminazione.
 
-![](/assets/web/deleteUser.jpg)
+![](/assets/web/deleteUser.png)
 
 ## Pagina stanze
 In questa pagina l'amministratore può visualizzare tutte le stanze create, operando su di esse funzioni di creazione, modifica ed eliminazione. A queste funzionalità si accede in modo simile a come è stato implementato nella pagina utente.
@@ -61,20 +61,20 @@ In questa pagina l'amministratore può visualizzare tutte le stanze create, oper
 Per creare una nuova stanza è necessario cliccare sul pulsante a croce posto in alto a destra.
 Mentre per modificare i dati di una stanza è sufficiente cliccare sul nome della stessa.
 Infine per eliminare una stanza è necessario cliccare sul pulsante a forma di cestino.
-![](/assets/web/roomPage.jpg)
+![](/assets/web/roomPage.png)
 
 ## Creazione stanza
 L'amministratore, dopo aver cliccato sul pulsante di creazione nuova stanza, potrà inserire i nuovi dati tramite una finestra a pop-up.
-![](/assets/web/createRoom.jpg)
+![](/assets/web/createRoom.png)
 
 ## Modifica dati stanza
 L'amministratore, dopo aver cliccato sul nome della stanza, potrà inserire i nuovi dati tramite una finestra a pop-up.
 
-![](/assets/web/modifyRoom.jpg)
+![](/assets/web/modifyRoom.png)
 
 ## Eliminazione stanza
 L'amministratore, dopo aver cliccato sul pulsante di eliminazione stanza, potrà visualizzare dei dati informativi sull'utente e sarà chiesta la conferma di eliminazione.
 
-![](/assets/web/deleteRoom.jpg)
+![](/assets/web/deleteRoom.png)
 
 
