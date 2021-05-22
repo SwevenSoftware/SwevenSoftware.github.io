@@ -6,7 +6,7 @@ grand_parent: Manuale Manutentore
 nav_order: 3
 ---
 
-# Architettura Server
+# Architettura Web
 
 <details open markdown="block">
   <summary>
