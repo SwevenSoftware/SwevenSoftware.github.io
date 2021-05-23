@@ -16,7 +16,7 @@ Lo scopo del Manuale Manutentore è presentare le procedure di installazione e s
 Il prodotto BlockCOVID permette di tracciare l'utilizzo di postazioni e stanze di lavoro all'interno di aziende.
 Il progetto si articola su 3 moduli:
 - [Server](/manutentore/server): espone le API utilizzate dai client Android e Web, fornisce la business logic e permette di persistere i dati su database e servizio blockchain,
-- [Android](/manutentore-android): permette ai dipendenti di prenotare ed utilizzare le postazioni di lavoro, e agli addetti alle pulizie di segnalare le stanze sanificate,
+- [Android](/manutentore/android): permette ai dipendenti di prenotare ed utilizzare le postazioni di lavoro, e agli addetti alle pulizie di segnalare le stanze sanificate,
 - [Web](/manutentore/web): mette a disposizione degli amministratori una piattaforma web per reperire informazioni sull'utilizzo delle postazioni, con possibilità di creare e modificare stanze e di generare i report che verranno aggiunti alla blockchain.
 
 ## Tipologie di utenti
