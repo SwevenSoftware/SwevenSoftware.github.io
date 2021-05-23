@@ -8,7 +8,7 @@ nav_order: 2
 
 # Utilizzo
 
-Per l'installazione e l'utilizzo del server si faccia riferimento alla
-sezione [Usage del README](https://github.com/SwevenSoftware/BlockCOVID-web#usage)
+Per l'installazione e l'utilizzo del web client si faccia riferimento alla
+[sezione usage del README](https://github.com/SwevenSoftware/BlockCOVID-web#usage).
 
 {% include prev_next.liquid %}
