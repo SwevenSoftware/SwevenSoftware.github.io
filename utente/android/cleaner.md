@@ -40,3 +40,5 @@ Se una stanza da pulire è stata appena igienizzata, è possibile indicarla come
 L'addetto alle pulizie ha una propria pagina utente, accessibile cliccando il pulsante in alto a destra. Da qui potrà vedere le proprie informazioni, cambiare la password o effettuare il logout.
 
 <img src="/assets/android/app_screenshots/cleaner_account.png" width="200">
+
+{% include prev_next.liquid %}
