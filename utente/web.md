@@ -65,6 +65,8 @@ Infine per eliminare una stanza è necessario cliccare sul pulsante a forma di c
 
 ## Creazione stanza
 L'amministratore, dopo aver cliccato sul pulsante di creazione nuova stanza, potrà inserire i nuovi dati tramite una finestra a pop-up.
+
+
 ![](/assets/web/createRoom.png)
 
 ## Modifica dati stanza
