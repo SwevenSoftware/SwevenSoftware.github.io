@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Utenti
-parent: Server
+parent: API
 nav_order: 2
 grand_parent: Manuale Utente
 ---
@@ -9,7 +9,7 @@ grand_parent: Manuale Utente
 {: .no_toc }
 Di seguito vengono riportate le API per la gestione da parte dell'amministratore degli account utente e addetto alle pulizie
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

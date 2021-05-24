@@ -7,8 +7,8 @@ nav_order: 4
 ---
 
 # Testing
-
-<details open markdown="block">
+{: .no_toc }
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

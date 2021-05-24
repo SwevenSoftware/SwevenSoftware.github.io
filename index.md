@@ -28,6 +28,10 @@ ethereum per il salvataggio delle firme dei report generati.
 
 
 ## Android
+
+[![Latest release](https://badgen.net/github/release/SwevenSoftware/BlockCOVID-android)](https://github.com/SwevenSoftware/BlockCOVID-android/releases/latest)
+![Build status](https://github.com/SwevenSoftware/BlockCOVID-android/actions/workflows/build-app.yml/badge.svg)
+
 Il modulo android è il client per i dipendenti e gli addetti alle pulizie
 
 - [Manuale Manutentore](/manutentore/android)
