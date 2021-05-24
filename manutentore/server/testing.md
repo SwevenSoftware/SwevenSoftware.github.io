@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Testing
-parent: Manutentore Server
+parent: Server
 grand_parent: Manuale Manutentore
 nav_order: 4
 ---

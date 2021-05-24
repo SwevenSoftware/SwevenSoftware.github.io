@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Addetto alle pulizie
-parent: Utente Android
+parent: Android App
 nav_order: 1
 grand_parent: Manuale Utente
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installazione
-parent: Manutentore Android
+parent: Android
 grand_parent: Manuale Manutentore
 nav_order: 2
 ---

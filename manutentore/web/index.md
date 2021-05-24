@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Manutentore Web
+title: Web
 parent: Manuale Manutentore
 has_children: true
 ---

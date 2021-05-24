@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Stanze
-parent: Utente Server
+parent: API
 nav_order: 3
 grand_parent: Manuale Utente
 ---

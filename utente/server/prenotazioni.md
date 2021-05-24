@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prenotazioni
-parent: Utente Server
+parent: API
 nav_order: 4
 grand_parent: Manuale Utente
 ---
