@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Tecnologie
-parent: Web
+parent: Manutentore Web
 grand_parent: Manuale Manutentore
 nav_order: 1
 ---
 
 # Tecnologie
-
+{: .no_toc }
 Le versioni delle seguenti tecnologie utilizzate all'interno del progetto sono reperibili all'interno del file `package.json`.
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

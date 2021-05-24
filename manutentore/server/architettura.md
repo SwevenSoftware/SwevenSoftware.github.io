@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Architettura
-parent: Server
+parent: Manutentore Server
 grand_parent: Manuale Manutentore
 nav_order: 3
 ---
 
 # Architettura Server
-
-<details open markdown="block">
+{: .no_toc }
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

@@ -15,8 +15,6 @@ Lo scopo del Manuale per l'utente è illustrare tutte le funzionalità sviluppat
 3. Funzionalità applicazione Android
 
 ## Riferimenti informativi
-* Documentazione Android
-https://developer.android.com/docs
-* Documentazione React  
-https://it.reactjs.org/
+* Documentazione Android: [https://developer.android.com/docs](https://developer.android.com/docs)
+* Documentazione React: [https://it.reactjs.org/](https://it.reactjs.org/)
 
