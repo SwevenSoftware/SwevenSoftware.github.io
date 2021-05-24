@@ -6,13 +6,16 @@ grand_parent: Manuale Manutentore
 nav_order: 4
 ---
 
-# Indice
-{: .no_toc .text-delta }
-
+# Test
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
-# Test
 ## Test di unità
 I test di unità sono stati sviluppati utilizzando Junit e Mockito.
 Per eseguirli tramite Android Studio è sufficiente fare tasto destro sul file di test all'interno della cartella "com.sweven.blockcovid (test)" e cliccare su "Run Test with Coverage".

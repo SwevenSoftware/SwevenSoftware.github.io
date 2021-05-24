@@ -6,13 +6,16 @@ grand_parent: Manuale Manutentore
 nav_order: 2
 ---
 
-# Indice
-{: .no_toc .text-delta }
-
+# Setup
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
-# Setup
 ## Requisiti minimi di sistema
 ### Prerequisiti
 - Android Studio

@@ -6,13 +6,16 @@ grand_parent: Manuale Manutentore
 nav_order: 5
 ---
 
-# Indice
-{: .no_toc .text-delta }
+# Contribuzione
 
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
-
-# Contribuzione
+</details>
 
 Come indicato all'interno della sezione [Contributing del README](https://github.com/SwevenSoftware/BlockCOVID-android#contributing) è stato adottato il [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 

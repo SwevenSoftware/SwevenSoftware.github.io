@@ -6,13 +6,16 @@ grand_parent: Manuale Manutentore
 nav_order: 1
 ---
 
-# Indice
-{: .no_toc .text-delta }
-
+# Tecnologie e Librerie Utilizzate
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
-# Tecnologie e Librerie Utilizzate
 ## Tecnologie
 ### Android SDK 30
 Android SDK fornisce le librerie API e gli strumenti per sviluppatori necessari per creare, testare ed eseguire il debug di app per Android.

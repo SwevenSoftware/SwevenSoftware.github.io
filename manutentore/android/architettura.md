@@ -6,13 +6,16 @@ grand_parent: Manuale Manutentore
 nav_order: 3
 ---
 
-# Indice
-{: .no_toc .text-delta }
-
+# Architettura del prodotto
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
-# Architettura del prodotto
 L'architettura scelta per l'applicazione mobile è il MVVM (Model View ViewModel).
 Questa architetura è ottima per separare logica da presentazione, ma non solo, è particolarmente utile per gestire con efficacia e scalabilità le chiamate API.
 Ogni funzionalità infatti segue questa architettura, con alcune aggiunte per soddisfare le necessità intrinseche ad ogni funzionalità.
