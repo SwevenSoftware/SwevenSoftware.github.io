@@ -27,7 +27,7 @@ Modifiche al codice sorgente (per ogni _branch_ e per _Pull Request_) scatenano 
     - controlla l'aderenza al formato [Prettier](/manutentore/web/tecnologie#prettier);
     - compila il codice.
 - `coverage`
-    - installa le dipendeze;
+    - installa le dipendenze;
     - esegue tutti i test;
     - genera un report sui test effettuati e lo pubblica su [Codecov](https://app.codecov.io/gh/SwevenSoftware/BlockCOVID-web).
 
