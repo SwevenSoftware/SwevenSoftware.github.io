@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Server
+title: Utente Server
 parent: Manuale Utente
 has_children: true
 ---

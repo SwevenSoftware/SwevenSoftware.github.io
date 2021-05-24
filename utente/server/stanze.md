@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Stanze
-parent: Server
+parent: Utente Server
 nav_order: 3
 grand_parent: Manuale Utente
 ---
 # Stanze
 Di seguito vengono riportate le API esposte dal server per la gestione delle stanze
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

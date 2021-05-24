@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prenotazioni
-parent: Server
+parent: Utente Server
 nav_order: 4
 grand_parent: Manuale Utente
 ---
@@ -10,7 +10,7 @@ grand_parent: Manuale Utente
 {: .no_toc}
 Di seguito vengono riportate le API che permettono le gestione delle prenotazioni
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

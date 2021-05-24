@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Architettura
-parent: Android
+parent: Manutentore Android
 grand_parent: Manuale Manutentore
 nav_order: 3
 ---
 
 # Architettura del prodotto
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice
