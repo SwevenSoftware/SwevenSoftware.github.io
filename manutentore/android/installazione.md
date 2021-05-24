@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Installazione
-parent: Android
+parent: Manutentore Android
 grand_parent: Manuale Manutentore
 nav_order: 2
 ---
 
 # Setup
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice

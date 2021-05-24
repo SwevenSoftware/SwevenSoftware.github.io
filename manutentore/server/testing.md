@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Testing
-parent: Server
+parent: Manutentore Server
 grand_parent: Manuale Manutentore
 nav_order: 4
 ---
 
 # Testing
-
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice

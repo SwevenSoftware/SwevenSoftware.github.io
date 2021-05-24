@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Contribuzione
-parent: Android
+parent: Manutentore Android
 grand_parent: Manuale Manutentore
 nav_order: 5
 ---
 
 # Contribuzione
-
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice

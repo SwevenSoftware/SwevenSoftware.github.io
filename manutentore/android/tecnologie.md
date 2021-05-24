@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Tecnologie
-parent: Android
+parent: Manutentore Android
 grand_parent: Manuale Manutentore
 nav_order: 1
 ---
 
 # Tecnologie e Librerie Utilizzate
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice

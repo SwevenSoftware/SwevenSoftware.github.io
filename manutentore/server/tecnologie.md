@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Tecnologie
-parent: Server
+parent: Manutentore Server
 grand_parent: Manuale Manutentore
 nav_order: 1
 ---
 
 # Tecnologie
-
+{: .no_toc }
 Le versioni delle seguenti tecnologie utilizzate all'interno del progetto sono reperibili all'interno del file `build.gradle`.
 
 <details closed markdown="block">

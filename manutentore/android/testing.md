@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Testing
-parent: Android
+parent: Manutentore Android
 grand_parent: Manuale Manutentore
 nav_order: 4
 ---
 
 # Test
+{: .no_toc }
 <details closed markdown="block">
   <summary>
     Indice

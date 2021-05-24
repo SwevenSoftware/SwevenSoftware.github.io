@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prenotazioni
-parent: Server
+parent: Utente Server
 nav_order: 4
 grand_parent: Manuale Utente
 ---

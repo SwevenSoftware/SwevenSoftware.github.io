@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Android
+title: Utente Android
 parent: Manuale Utente
 has_children: true
 ---

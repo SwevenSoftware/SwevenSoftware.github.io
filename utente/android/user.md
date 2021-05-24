@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Utente
-parent: Android
+parent: Utente Android
 nav_order: 1
 grand_parent: Manuale Utente
 ---

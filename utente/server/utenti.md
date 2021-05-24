@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Utenti
-parent: Server
+parent: Utente Server
 nav_order: 2
 grand_parent: Manuale Utente
 ---
