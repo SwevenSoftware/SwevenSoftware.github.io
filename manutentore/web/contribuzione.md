@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Contribuzione
-parent: Server
+parent: Web
 grand_parent: Manuale Manutentore
 nav_order: 5
 ---
 
 # Contribuzione
 
-Come indicato all'interno della sezione [Contributing del README](https://github.com/SwevenSoftware/BlockCOVID-server#contributing) è stato adottato il [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) e lo stile del codice deve seguire il formato [spotless](/manutentore/server/tecnologie#spotless).
+Come indicato all'interno della [sezione contributing del README](https://github.com/SwevenSoftware/BlockCOVID-web#contributing) è stato adottato il [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) e lo stile del codice deve seguire il formato [Prettier](/manutentore/web/tecnologie#prettier).
 
 <details open markdown="block">
   <summary>
@@ -19,15 +19,16 @@ Come indicato all'interno della sezione [Contributing del README](https://github
 {:toc}
 </details>
 
-## Continuous Integration
+## Continuous integration
 
 Modifiche al codice sorgente (per ogni _branch_ e per _Pull Request_) scatenano i processi di [_continuous-integration_](/glossario#continuous-integration) attraverso _GitHub Actions_, seguendo due workflow (`.github/workflows`):
-- `build-server`
-    - Controlla l'aderenza al formato [spotless](/manutentore/server/tecnologie#spotless)
-    - Compila il codice
-    - Esegue tutti i test presenti
-- `coverage-server`
-    - Esegue tutti i test
-    - Genera un report sui test effettuati e lo pubblica su [Codecov](https://app.codecov.io/gh/SwevenSoftware/BlockCOVID-server)
+- `build-bundle`
+    - installa le dipendenze;
+    - controlla l'aderenza al formato [Prettier](/manutentore/web/tecnologie#prettier);
+    - compila il codice.
+- `coverage`
+    - installa le dipendeze;
+    - esegue tutti i test;
+    - genera un report sui test effettuati e lo pubblica su [Codecov](https://app.codecov.io/gh/SwevenSoftware/BlockCOVID-web).
 
 {% include prev_next.liquid %}
