@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tecnologie
-parent: Manutentore Web
+parent: Web
 grand_parent: Manuale Manutentore
 nav_order: 1
 ---

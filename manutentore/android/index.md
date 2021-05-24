@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Manutentore Android
+title: Android
 parent: Manuale Manutentore
 has_children: true
 ---

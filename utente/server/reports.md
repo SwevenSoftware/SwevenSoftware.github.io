@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Reports
-parent: Utente Server
+parent: API
 nav_order: 5
 grand_parent: Manuale Utente
 ---

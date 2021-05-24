@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Account
-parent: Utente Server
+parent: API
 nav_order: 1
 grand_parent: Manuale Utente
 ---

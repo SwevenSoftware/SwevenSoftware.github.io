@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Utilizzo
-parent: Manutentore Server
+parent: Server
 grand_parent: Manuale Manutentore
 nav_order: 2
 ---

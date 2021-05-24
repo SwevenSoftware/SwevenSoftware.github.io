@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Manutentore Server
+title: Server
 parent: Manuale Manutentore
 has_children: true
 ---
