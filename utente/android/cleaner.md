@@ -7,9 +7,15 @@ grand_parent: Manuale Utente
 ---
 
 # Addetto alle pulizie
-
+{: .no_toc }
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
 ## Requisiti minimi di sistema
 - Dispositivo Android

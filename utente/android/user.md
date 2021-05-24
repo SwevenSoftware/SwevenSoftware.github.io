@@ -7,9 +7,15 @@ grand_parent: Manuale Utente
 ---
 
 # Utente
-
+{: .no_toc }
+<details closed markdown="block">
+  <summary>
+    Indice
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
 ## Requisiti minimi di sistema
 - Dispositivo Android dotato di tecnologia RFID
