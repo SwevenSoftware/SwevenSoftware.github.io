@@ -8,7 +8,7 @@ nav_order: 3
 
 # Architettura Server
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

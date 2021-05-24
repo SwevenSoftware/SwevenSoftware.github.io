@@ -8,7 +8,7 @@ nav_order: 4
 
 # Testing
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

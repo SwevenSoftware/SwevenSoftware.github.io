@@ -10,7 +10,7 @@ grand_parent: Manuale Utente
 Di seguito venogno riportate le API esposte dal server per la
 richiesta dei report di utlizzo delle stanze
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

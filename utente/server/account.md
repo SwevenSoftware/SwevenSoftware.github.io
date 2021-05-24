@@ -10,7 +10,7 @@ grand_parent: Manuale Utente
 Di seguito vengono riportate le API per la gestione del proprio
 account e l'autenticazione sul server
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

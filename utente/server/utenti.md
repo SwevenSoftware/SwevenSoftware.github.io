@@ -9,7 +9,7 @@ grand_parent: Manuale Utente
 {: .no_toc }
 Di seguito vengono riportate le API per la gestione da parte dell'amministratore degli account utente e addetto alle pulizie
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>

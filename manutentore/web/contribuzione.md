@@ -10,7 +10,7 @@ nav_order: 5
 
 Come indicato all'interno della sezione [Contributing del README](https://github.com/SwevenSoftware/BlockCOVID-server#contributing) è stato adottato il [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) e lo stile del codice deve seguire il formato [spotless](/manutentore/server/tecnologie#spotless).
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
     Indice
   </summary>
