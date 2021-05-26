@@ -123,5 +123,38 @@ creati dall'avvio del server in poi
 | [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | permessi insufficenti                                             |
 | [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Errore nella creazione del report, contattare il team di sviluppo |
 
+# Richiesta download report già generato
+
+L'amministratore è in grado di scaricare i report già creati dal sistema.
+
+**URL** : `/api/reports/report/{reportName}`
+
+**Parametri URL** : 
+- `{reportName}`: Nome del report. reperibile dalla [lista dei report creati](/utente/server/reports.html#lista-dei-report-creati)
+
+**Metodo** : `GET`
+
+**Autenticazione richiesta** : SI
+
+**Permessi richiesti** : ADMIN
+
+## Messaggi di successo
+{: .no_toc}
+
+**Condizione** : Report presente nel sistema e correttamente restituito
+
+**Codice** : `200 OK`
+
+**Contenuto risposta** : pdf richiesto
+
+## Messaggi di errore
+{: .no_toc}
+
+| Codice                                                              | Motivazione                                                                    |
+|:--------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) | Sintassi del nome utente non valida                                            |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | permessi insufficenti                                                          |
+| [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) | Report non presente, nome errato                                               |
+| [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | errore di IO nel reperimento del report, contattare il manutentore del sistema |
 
 {% include prev_next.liquid %}
