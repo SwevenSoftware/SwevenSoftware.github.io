@@ -33,7 +33,7 @@ finestra a pop-up.
 L'amministratore, dopo aver cliccato sul nome della stanza, potrà
 inserire i nuovi dati tramite una finestra a pop-up. In questo
 contesto sarà possibile inserire le postazioni all'interno della
-stanza
+stanza.
 
 <img src="/assets/web/modifyRoom.gif">
 

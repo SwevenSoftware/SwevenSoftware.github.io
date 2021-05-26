@@ -18,7 +18,7 @@ grand_parent: Manuale Utente
 
 La navigazione del pannello amministratore è disponibile tramite un
 menù ad hamburger sul lato sinistro della pagina. In questo modo è
-possibile muoversi tra le varie sezioni del sito
+possibile muoversi tra le varie sezioni del sito.
 
 <img src="/assets/web/hamburger.gif">
 
