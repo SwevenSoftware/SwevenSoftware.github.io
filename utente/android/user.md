@@ -104,4 +104,4 @@ All'orario in cui la prenotazione finisce, l'utente riceverà una notifica per r
 
 <img src="/assets/android/app_screenshots/notification.png" width="400">
 
-
+{% include prev_next.liquid %}

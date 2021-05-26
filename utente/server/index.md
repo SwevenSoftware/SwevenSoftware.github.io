@@ -8,7 +8,8 @@ has_children: true
 # Manuale Utente Server
 Il seguente manuale è rivolto agli utilizzatori del server, ovvero i
 client che utilizzano le API esposte. Per informazioni riguardanti il
-deploy del server fare riferimento al [manuale sviluppatore](/manutentore/server/index.html).
+deploy del server fare riferimento al [manuale
+sviluppatore](/manutentore/server/index.html).
 
 ## Regole generali
 * Ogni richiesta all'api deve avere nel campo `Contenuto-Type`
@@ -19,3 +20,13 @@ deploy del server fare riferimento al [manuale sviluppatore](/manutentore/server
   contiene i link dove le informazioni recuperate con la chiamata
   fatta possono essere riutilizzate all'interno dell'api in maniera
   semanticamente simile
+  
+## Primo login
+Il primo accesso all'applicazione tramite l'[api di
+login](/utente/server/account.html#login) può essere eseguito tramite
+un account creato di default al primo avvio del server con
+credenziali:
+
+| Username | Password |
+|:---------|:---------|
+| admin    | password |
