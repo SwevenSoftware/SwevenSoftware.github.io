@@ -16,11 +16,10 @@ grand_parent: Manuale Utente
 {:toc}
 </details>
 
-In tutte le pagine la navigazione nel sito è supportata da un menù ad hamburger, posto nel lato sinistro della pagina.
-Da questo menù si può accedere alle quattro pagine che compongono il sito:
-- pagina prenotazioni;
-- pagina stanze;
-- pagina utenti;
-- logout.
+La navigazione del pannello amministratore è disponibile tramite un
+menù ad hamburger sul lato sinistro della pagina. In questo modo è
+possibile muoversi tra le varie sezioni del sito
+
+<img src="/assets/web/hamburger.gif">
 
 {% include prev_next.liquid %}

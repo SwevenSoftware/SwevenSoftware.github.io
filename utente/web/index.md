@@ -16,4 +16,8 @@ has_children: true
 {:toc}
 </details>
 
-Il seguente manuale è rivolto agli amministratori del servizio BlockCOVID. Tramite il web client è possibile infatti gestire gli utenti, le stanze e tutte le funzionalità rigardanti il tracciamento dell'utilizzo delle postazioni, assieme alla creazione dei report dell'utilizzo e pulizia delle postazioni.
+Il seguente manuale è rivolto agli amministratori del servizio
+BlockCOVID. Tramite il web client è possibile infatti gestire gli
+utenti, le stanze e tutte le funzionalità rigardanti il tracciamento
+dell'utilizzo delle postazioni, assieme alla creazione dei report
+dell'utilizzo e pulizia delle postazioni.
