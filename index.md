@@ -31,6 +31,7 @@ ethereum per il salvataggio delle firme dei report generati.
 
 [![Latest release](https://badgen.net/github/release/SwevenSoftware/BlockCOVID-android)](https://github.com/SwevenSoftware/BlockCOVID-android/releases/latest)
 ![Build status](https://github.com/SwevenSoftware/BlockCOVID-android/actions/workflows/build-app.yml/badge.svg)
+[![codecov](https://codecov.io/gh/SwevenSoftware/BlockCOVID-android/branch/develop/graph/badge.svg)](https://codecov.io/gh/SwevenSoftware/BlockCOVID-android)
 
 Il modulo android è il client per i dipendenti e gli addetti alle pulizie
 
@@ -40,6 +41,10 @@ Il modulo android è il client per i dipendenti e gli addetti alle pulizie
 [GitHub Repo](https://github.com/SwevenSoftware/BlockCOVID-android){: .btn .btn-primary }
 
 ## Web
+[![Latest release](https://badgen.net/github/release/SwevenSoftware/BlockCOVID-web)](https://github.com/SwevenSoftware/BlockCOVID-web/releases/latest)
+![Build status](https://github.com/SwevenSoftware/BlockCOVID-web/actions/workflows/build-bundle.yml/badge.svg)
+[![codecov](https://codecov.io/gh/SwevenSoftware/BlockCOVID-web/branch/develop/graph/badge.svg)](https://codecov.io/gh/SwevenSoftware/BlockCOVID-web)
+
 Il modulo web è il client rivolto agli amministratori del sistema
 
 - [Manuale Manutentore](/manutentore/web)
