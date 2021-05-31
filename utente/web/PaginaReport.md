@@ -17,21 +17,21 @@ grand_parent: Manuale Utente
 {:toc}
 </details>
 
-Dopo aver effettuato il login sarà disponibile la pagina contente i
+Dopo aver effettuato il login sarà disponibile la pagina contenente i
 report sull'utilizzo e sull'igenizzazione delle
-stanze. L'amministratore da qui potrà scaricare i report
-già generati oppure generarne di nuovi al momento.
+stanze. L'amministratore da quì potrà scaricare i report
+già generati oppure crearne di nuovi al momento.
 
 ## Download report già generato
-L'amministratore può scaricare un report già generato semplicamente
-cliaccando sul nome di quest'ultimo
+L'amministratore può scaricare un report già generato semplicemente
+cliccando sul nome di quest'ultimo.
 
 <img src="/assets/web/downloadReport.gif">
 
 ## Generazione report
-L'amministratore tramite un pulsante in alto a destra potrà generare
-due tipi di report: i report sull'utilizzo delle stanze (icona rossa)
-oppure il report sulla sanificazione delle stanze (icona blu).
+L'amministratore tramite due pulsanti in alto a destra potrà generare
+due tipi di report: il report sull'utilizzo delle stanze (icona marrone)
+oppure il report sulla sanificazione delle stanze (icona azzurra).
 
 <img src="/assets/web/createUsageReport.gif">
 
