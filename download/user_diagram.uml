@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/lucaz/Documents/GitHub/BlockCOVID-server/src/main/java/it/sweven/blockcovid/users</OriginalElement>
+  <nodes>
+    <node x="2725.9450231481483" y="630.0">it.sweven.blockcovid.users.controllers.LoginController</node>
+    <node x="-161.35706018518522" y="192.0">it.sweven.blockcovid.users.security.TokenAuthenticationProvider</node>
+    <node x="1204.9450231481483" y="640.0">it.sweven.blockcovid.users.controllers.ModifyPasswordController</node>
+    <node x="1665.9450231481483" y="209.0">it.sweven.blockcovid.users.services.UserRegistrationService</node>
+    <node x="584.9450231481482" y="640.0">it.sweven.blockcovid.users.controllers.DeleteUserController</node>
+    <node x="855.9450231481482" y="651.0">it.sweven.blockcovid.users.controllers.ListUsersController</node>
+    <node x="1335.1325231481483" y="867.0">it.sweven.blockcovid.users.assemblers.UserAssembler</node>
+    <node x="2336.9450231481483" y="640.0">it.sweven.blockcovid.users.controllers.RegistrationController</node>
+    <node x="825.6741319444448" y="183.0">it.sweven.blockcovid.users.services.UUIDAuthenticationService</node>
+    <node x="1213.3482638888895" y="0.0">it.sweven.blockcovid.users.repositories.UserRepository</node>
+    <node x="445.9999999999999" y="232.0">it.sweven.blockcovid.users.services.TokenService</node>
+    <node x="393.9999999999999" y="0.0">it.sweven.blockcovid.users.repositories.TokenRepository</node>
+    <node x="1217.3482638888895" y="150.0">it.sweven.blockcovid.users.services.UserService</node>
+    <node x="266.9999999999999" y="662.0">it.sweven.blockcovid.users.controllers.LogoutController</node>
+    <node x="2113.9450231481483" y="662.0">it.sweven.blockcovid.users.controllers.AccountInfoController</node>
+    <node x="729.8649305555557" y="25.0">it.sweven.blockcovid.users.services.UserAuthenticationService</node>
+    <node x="1665.9450231481483" y="640.0">it.sweven.blockcovid.users.controllers.ModifyUserController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="it.sweven.blockcovid.users.controllers.AccountInfoController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="-30.000023148148102" y="39.5" />
+      <point x="2185.445" y="928.5" />
+      <point x="144.5" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.AccountInfoController" relationship="DEPENDENCY">
+      <point x="144.5" y="15.0" />
+      <point x="2200.445" y="943.5" />
+      <point x="-15.000023148148102" y="39.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.TokenService" target="it.sweven.blockcovid.users.repositories.TokenRepository" relationship="TO_ONE">
+      <point x="0.0" y="-61.5" />
+      <point x="29.0" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.RegistrationController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="-15.000023148148102" y="61.5" />
+      <point x="2506.445" y="973.5" />
+      <point x="1590.0" y="973.5" />
+      <point x="1590.0" y="868.5" />
+      <point x="144.5" y="-60.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.RegistrationController" relationship="DEPENDENCY">
+      <point x="30.0" y="61.5" />
+      <point x="1509.6325231481483" y="1007.5" />
+      <point x="2536.445" y="1007.5" />
+      <point x="14.999976851851898" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.ModifyUserController" relationship="DEPENDENCY">
+      <point x="144.5" y="-45.0" />
+      <point x="1849.945" y="883.5" />
+      <point x="-30.00002314814833" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UUIDAuthenticationService" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="117.0" y="0.0" />
+      <point x="-142.5" y="-22.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyUserController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="-15.00002314814833" y="61.5" />
+      <point x="1864.945" y="898.5" />
+      <point x="144.5" y="-30.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LoginController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="0.0" y="61.5" />
+      <point x="2894.4450231481483" y="1022.5" />
+      <point x="1479.6325231481483" y="1022.5" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UUIDAuthenticationService" target="it.sweven.blockcovid.users.services.UserAuthenticationService" relationship="REALIZATION">
+      <point x="-101.30920138888905" y="-83.5" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ListUsersController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="14.999976851851784" y="50.5" />
+      <point x="1035.445" y="789.0" />
+      <point x="1464.633" y="789.0" />
+      <point x="-14.999523148148228" y="-61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UUIDAuthenticationService" target="it.sweven.blockcovid.users.services.TokenService" relationship="TO_ONE">
+      <point x="-117.0" y="0.0" />
+      <point x="111.0" y="-27.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.ListUsersController" relationship="DEPENDENCY">
+      <point x="-144.5" y="-15.0" />
+      <point x="1005.445" y="913.5" />
+      <point x="-15.000023148148102" y="50.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ListUsersController" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="14.999976851851784" y="-50.5" />
+      <point x="1035.445" y="417.5" />
+      <point x="-142.5" y="129.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UserService" target="it.sweven.blockcovid.users.repositories.UserRepository" relationship="DEPENDENCY">
+      <point x="0.0" y="-138.5" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.ModifyPasswordController" relationship="DEPENDENCY">
+      <point x="-69.18752314814833" y="-61.5" />
+      <point x="-15.00002314814833" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyPasswordController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="14.99997685185167" y="61.5" />
+      <point x="1440.445" y="789.0" />
+      <point x="1464.633" y="789.0" />
+      <point x="-14.999523148148228" y="-61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LoginController" target="it.sweven.blockcovid.users.services.UserAuthenticationService" relationship="DEPENDENCY">
+      <point x="-2.3148148102336563E-5" y="-61.5" />
+      <point x="2894.445" y="117.5" />
+      <point x="111.5" y="42.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.DeleteUserController" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="-2.3148148102336563E-5" y="-61.5" />
+      <point x="710.445" y="387.5" />
+      <point x="-142.5" y="99.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyUserController" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="-15.0" y="-61.5" />
+      <point x="1864.9450231481483" y="342.5" />
+      <point x="142.5" y="54.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyPasswordController" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="-101.44502314814827" y="-61.5" />
+      <point x="-35.848263888889505" y="138.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LogoutController" target="it.sweven.blockcovid.users.services.TokenService" relationship="DEPENDENCY">
+      <point x="109.5" y="-39.5" />
+      <point x="-63.5" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.security.TokenAuthenticationProvider" target="it.sweven.blockcovid.users.services.TokenService" relationship="TO_ONE">
+      <point x="263.5" y="-15.0" />
+      <point x="-111.0" y="-55.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UserService" target="it.sweven.blockcovid.users.repositories.UserRepository" relationship="TO_ONE">
+      <point x="15.0" y="-138.5" />
+      <point x="15.0" y="50.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UserRegistrationService" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="-130.0" y="29.0" />
+      <point x="142.5" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.security.TokenAuthenticationProvider" target="it.sweven.blockcovid.users.services.UserAuthenticationService" relationship="DEPENDENCY">
+      <point x="0.0" y="-61.5" />
+      <point x="102.14293981481478" y="-17.5" />
+      <point x="841.3649305555557" y="-17.5" />
+      <point x="0.0" y="-50.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.AccountInfoController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="0.0" y="39.5" />
+      <point x="2215.4450231481483" y="959.5" />
+      <point x="1619.0" y="959.5" />
+      <point x="1619.0" y="973.5" />
+      <point x="144.5" y="45.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.DeleteUserController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="-2.3148148102336563E-5" y="61.5" />
+      <point x="710.445" y="815.0" />
+      <point x="1479.633" y="815.0" />
+      <point x="4.7685185177215317E-4" y="-61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyUserController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="-2.314814832971024E-5" y="61.5" />
+      <point x="1879.945" y="913.5" />
+      <point x="144.5" y="-15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.RegistrationController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="-2.3148148102336563E-5" y="61.5" />
+      <point x="2521.445" y="988.5" />
+      <point x="144.5" y="60.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.RegistrationController" target="it.sweven.blockcovid.users.services.UserRegistrationService" relationship="DEPENDENCY">
+      <point x="15.0" y="-61.5" />
+      <point x="2536.4450231481483" y="244.5" />
+      <point x="130.0" y="-15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LogoutController" target="it.sweven.blockcovid.users.services.TokenService" relationship="TO_ONE">
+      <point x="69.5" y="-39.5" />
+      <point x="-103.5" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ListUsersController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="29.999976851851784" y="50.5" />
+      <point x="1050.445" y="898.5" />
+      <point x="-144.5" y="-30.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ListUsersController" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="-2.31481482160234E-5" y="-50.5" />
+      <point x="1020.4449999999999" y="402.5" />
+      <point x="-142.5" y="114.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.TokenService" target="it.sweven.blockcovid.users.repositories.TokenRepository" relationship="DEPENDENCY">
+      <point x="-29.0" y="-61.5" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UserRegistrationService" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="-130.0" y="0.0" />
+      <point x="142.5" y="-29.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.DeleteUserController" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="-15.000023148148102" y="-61.5" />
+      <point x="695.445" y="372.5" />
+      <point x="-142.5" y="84.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UUIDAuthenticationService" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="117.0" y="22.0" />
+      <point x="-142.5" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyPasswordController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="-2.314814832971024E-5" y="61.5" />
+      <point x="1425.445" y="815.0" />
+      <point x="1479.633" y="815.0" />
+      <point x="4.7685185177215317E-4" y="-61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LoginController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="TO_ONE">
+      <point x="15.0" y="61.5" />
+      <point x="2909.4450231481483" y="1037.5" />
+      <point x="1464.6325231481483" y="1037.5" />
+      <point x="-15.0" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.LoginController" target="it.sweven.blockcovid.users.services.UserAuthenticationService" relationship="TO_ONE">
+      <point x="14.999976851851898" y="-61.5" />
+      <point x="2909.445" y="-47.5" />
+      <point x="871.3649305555557" y="-47.5" />
+      <point x="30.0" y="-50.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.services.UUIDAuthenticationService" target="it.sweven.blockcovid.users.services.TokenService" relationship="DEPENDENCY">
+      <point x="-117.0" y="27.0" />
+      <point x="111.0" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.security.TokenAuthenticationProvider" target="it.sweven.blockcovid.users.services.TokenService" relationship="DEPENDENCY">
+      <point x="263.5" y="40.0" />
+      <point x="-111.0" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.RegistrationController" target="it.sweven.blockcovid.users.services.UserRegistrationService" relationship="TO_ONE">
+      <point x="0.0" y="-61.5" />
+      <point x="2521.4450231481483" y="259.5" />
+      <point x="130.0" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyPasswordController" target="it.sweven.blockcovid.users.services.UserService" relationship="TO_ONE">
+      <point x="-65.59675925925876" y="-61.5" />
+      <point x="0.0" y="138.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.assemblers.UserAssembler" target="it.sweven.blockcovid.users.controllers.DeleteUserController" relationship="DEPENDENCY">
+      <point x="-144.5" y="0.0" />
+      <point x="695.445" y="928.5" />
+      <point x="-15.000023148148102" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.DeleteUserController" target="it.sweven.blockcovid.users.assemblers.UserAssembler" relationship="DEPENDENCY">
+      <point x="14.999976851851898" y="61.5" />
+      <point x="725.445" y="789.0" />
+      <point x="1464.633" y="789.0" />
+      <point x="-14.999523148148228" y="-61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.controllers.ModifyUserController" target="it.sweven.blockcovid.users.services.UserService" relationship="DEPENDENCY">
+      <point x="0.0" y="-61.5" />
+      <point x="1879.9450231481483" y="327.5" />
+      <point x="142.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.users.security.TokenAuthenticationProvider" target="it.sweven.blockcovid.users.services.UserAuthenticationService" relationship="TO_ONE">
+      <point x="-15.0" y="-61.5" />
+      <point x="87.14293981481478" y="-32.5" />
+      <point x="856.3649305555557" y="-32.5" />
+      <point x="15.0" y="-50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="1656.5" y="625.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
