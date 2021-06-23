@@ -32,6 +32,8 @@ funzionalità inerenti alla gestione degli account:
 - Informazioni singolo account
 - Lista utenti registrati
 
+Il diagramma UML del pacchetto utenti è il seguente (click per ingrandire)
+
 [![](/assets/server/users_package.svg)](/assets/server/users_package.svg)
 
 [Download UML](/download/user_diagram.uml){: .btn .btn-primary }
@@ -43,6 +45,8 @@ Il package rooms si occupa della gestione delle stanze e delle postazioni:
 - Eliminazione stanza/postazione
 - Informazioni riguardanti lo stato di una stanza/postazione
 - Segnalazione stanza come pulita
+
+Il diagramma UML che descrive il pacchetto rooms (click per ingrandire):
 
 [![](/assets/server/rooms_package.svg)](/assets/server/rooms_package.svg)
 
@@ -57,6 +61,8 @@ Il package contiene layer che realizzano funzionalità inerenti all'utilizzo e l
 - Lista prenotazioni
 - Segnalazione inizio e fine utilizzo postazione
 
+Di seguito il diagramma UML (click per ingrandire)
+
 [![](/assets/server/reservations_package.svg)](/assets/server/reservations_package.svg)
 
 [Download UML](/download/reservations_diagram.uml){: .btn .btn-primary }
@@ -65,6 +71,8 @@ Il package contiene layer che realizzano funzionalità inerenti all'utilizzo e l
 Il package di blockchain permette di interfacciarsi con la blockchain, generando in autonomia pdf o su richiesta dell'utente, ed in ogni caso registrando l'hash sulla blockchain:
 - Generazione report PDF di utilizzo e pulizia delle stanze
 - Lista report generati
+
+Il diagramma UML per il pacchetto è il segente (click per ingrandire):
 
 [![](/assets/server/blockchain_package.svg)](/assets/server/blockchain_package.svg)
 
