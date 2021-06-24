@@ -42,12 +42,31 @@ A partire dallo stato corrente e dalle azioni intraprese, i reducers restituisco
 - #### Handlers
 Gli handlers sono costruiti come mappe di funzioni, che associano a ogni azione una funzione corrispondente. Questo [modo di organizzare i reducers](https://javascript.plainenglish.io/redux-without-switch-cases-and-some-other-tips-6a3d27157da6) è stato scelto al posto dell'approccio classico tramite `switch` in quanto rendeva più agevole l'aggiunta di una azione.
 
-Di seguito un esempio dell'architettura per il componente di login della applicazione web:
-
-![](/assets/web/web_scheme.png)
 
 ## Tipi
 
 Le actions, gli errori e i messaggi di conferma, sono gestiti tramite dei tipi esplicitati nel file `src/types.ts`. Questo consente di avere un unico punto nel quale dichiarare stringhe ricorrenti nel codice, permettendo una facile traduzione dei contenuti qualora fosse necessario.
+
+## Schema
+
+Di seguito un esempio generico dell'architettura per l'applicazione web:
+
+![](/assets/web/web_scheme.png)
+
+Schema dell'architettura per la pagina di login:
+
+![](/assets/web/login_scheme.png)
+
+Schema dell'architettura per la pagina degli utenti:
+
+![](/assets/web/accounts_scheme.png)
+
+Schema dell'architettura per la pagina delle stanze:
+
+![](/assets/web/rooms_scheme.png)
+
+Schema dell'architettura per la pagina dei report:
+
+![](/assets/web/reports_scheme.png)
 
 {% include prev_next.liquid %}
