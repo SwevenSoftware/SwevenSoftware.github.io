@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/lucaz/Documents/GitHub/BlockCOVID-server/src/main/java/it/sweven/blockcovid/reservations</OriginalElement>
+  <nodes>
+    <node x="2862.404595015576" y="962.0">it.sweven.blockcovid.reservations.controllers.ModifyReservationController</node>
+    <node x="465.0" y="1352.0">it.sweven.blockcovid.reservations.controllers.ViewPersonalDeskReservationsController</node>
+    <node x="3215.715008900755" y="1352.0">it.sweven.blockcovid.reservations.controllers.UserReservationController</node>
+    <node x="2390.4791666666665" y="1341.0">it.sweven.blockcovid.reservations.controllers.StartNewReservationController</node>
+    <node x="0.0" y="1341.0">it.sweven.blockcovid.reservations.controllers.EndReservationController</node>
+    <node x="2023.4045950155758" y="984.0">it.sweven.blockcovid.reservations.controllers.DeleteReservationController</node>
+    <node x="1757.737928348909" y="110.5">it.sweven.blockcovid.reservations.repositories.ReservationRepository</node>
+    <node x="1992.4045950155758" y="481.0">it.sweven.blockcovid.reservations.servicies.ReservationService</node>
+    <node x="3342.090008900755" y="0.0">it.sweven.blockcovid.reservations.entities.ReservationBuilder</node>
+    <node x="1729.524532710279" y="1191.0">it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler</node>
+    <node x="3909.715008900755" y="1341.0">it.sweven.blockcovid.reservations.controllers.StartReservationController</node>
+    <node x="1188.895833333333" y="1352.0">it.sweven.blockcovid.reservations.controllers.ViewAllReservationsController</node>
+    <node x="2450.404595015576" y="973.0">it.sweven.blockcovid.reservations.controllers.NewReservationController</node>
+    <node x="1049.4045950155758" y="995.0">it.sweven.blockcovid.reservations.controllers.GetDeskStateAtTimeController</node>
+    <node x="1500.4045950155758" y="984.0">it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.entities.ReservationBuilder" relationship="DEPENDENCY">
+      <point x="62.625" y="-72.5" />
+      <point x="3175.529595015576" y="911.0" />
+      <point x="3416.590008900755" y="911.0" />
+      <point x="-74.5" y="215.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.UserReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="-252.75" y="-50.5" />
+      <point x="3299.965008900755" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.DeleteReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="0.0" y="50.5" />
+      <point x="2226.904595015576" y="1139.0" />
+      <point x="2167.881675567422" y="1139.0" />
+      <point x="2167.881675567422" y="1169.0" />
+      <point x="2070.524532710279" y="1169.0" />
+      <point x="0.0" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="0.0" y="72.5" />
+      <point x="3112.904595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1169.0" />
+      <point x="2167.9531041388504" y="1169.0" />
+      <point x="97.42857142857156" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" target="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" relationship="DEPENDENCY">
+      <point x="292.2857142857142" y="-39.0" />
+      <point x="2362.810246995993" y="1159.0" />
+      <point x="3279.904595015576" y="1159.0" />
+      <point x="167.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.servicies.ReservationService" target="it.sweven.blockcovid.reservations.entities.ReservationBuilder" relationship="CREATE">
+      <point x="156.33333333333348" y="-204.5" />
+      <point x="2383.237928348909" y="456.0" />
+      <point x="3416.590008900755" y="456.0" />
+      <point x="-74.5" y="215.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.NewReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="-130.66666666666652" y="61.5" />
+      <point x="2515.737928348909" y="1139.0" />
+      <point x="2167.881675567422" y="1139.0" />
+      <point x="2167.881675567422" y="1169.0" />
+      <point x="2070.524532710279" y="1169.0" />
+      <point x="0.0" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.GetDeskStateAtTimeController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-107.75" y="-39.5" />
+      <point x="1157.1545950155758" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalDeskReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-202.5" y="-50.5" />
+      <point x="533.2476635514013" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.servicies.ReservationService" target="it.sweven.blockcovid.reservations.repositories.ReservationRepository" relationship="TO_ONE">
+      <point x="0.0" y="-204.5" />
+      <point x="2226.904595015576" y="456.0" />
+      <point x="2344.237928348909" y="456.0" />
+      <point x="195.5" y="105.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="146.625" y="-61.5" />
+      <point x="4251.8400089007555" y="1320.0" />
+      <point x="4165.0900089007555" y="1320.0" />
+      <point x="4165.0900089007555" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartNewReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="-146.625" y="-61.5" />
+      <point x="2439.3541666666665" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.DeleteReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-101.75" y="-50.5" />
+      <point x="2125.154595015576" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.DeleteReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="101.75" y="-50.5" />
+      <point x="2328.654595015576" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.EndReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-166.875" y="-61.5" />
+      <point x="55.625" y="1320.0" />
+      <point x="155.875" y="1320.0" />
+      <point x="155.875" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="-48.875" y="-61.5" />
+      <point x="4056.340008900755" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartNewReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="146.625" y="-61.5" />
+      <point x="2732.6041666666665" y="1300.0" />
+      <point x="3578.9798064085444" y="1300.0" />
+      <point x="3578.9798064085444" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="167.66666666666652" y="50.5" />
+      <point x="1919.5712616822423" y="1129.0" />
+      <point x="2675.404595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1169.0" />
+      <point x="2167.9531041388504" y="1169.0" />
+      <point x="97.42857142857156" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" target="it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController" relationship="DEPENDENCY">
+      <point x="-194.85714285714266" y="-39.0" />
+      <point x="1875.6673898531362" y="1159.0" />
+      <point x="1584.237928348909" y="1159.0" />
+      <point x="-167.66666666666674" y="50.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" target="it.sweven.blockcovid.reservations.controllers.GetDeskStateAtTimeController" relationship="DEPENDENCY">
+      <point x="-292.2857142857142" y="-39.0" />
+      <point x="1778.2388184245647" y="1169.0" />
+      <point x="1264.9045950155758" y="1169.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.NewReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-98.0" y="-61.5" />
+      <point x="2548.404595015576" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewAllReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="73.375" y="-50.5" />
+      <point x="1555.770833333333" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.UserReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="252.75" y="-50.5" />
+      <point x="3805.465008900755" y="1300.0" />
+      <point x="3774.0944314641742" y="1300.0" />
+      <point x="3774.0944314641742" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewAllReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-220.125" y="-50.5" />
+      <point x="1262.270833333333" y="1300.0" />
+      <point x="767.3622886070316" y="1300.0" />
+      <point x="767.3622886070316" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-187.875" y="-72.5" />
+      <point x="2925.029595015576" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="125.75" y="-50.5" />
+      <point x="1877.6545950155758" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" target="it.sweven.blockcovid.reservations.controllers.DeleteReservationController" relationship="DEPENDENCY">
+      <point x="-97.4285714285711" y="-39.0" />
+      <point x="1973.0959612817078" y="1159.0" />
+      <point x="2091.237928348909" y="1159.0" />
+      <point x="-135.66666666666652" y="50.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.DeleteReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="135.66666666666652" y="50.5" />
+      <point x="2362.571261682242" y="1129.0" />
+      <point x="2675.404595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1169.0" />
+      <point x="2167.9531041388504" y="1169.0" />
+      <point x="97.42857142857156" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.EndReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="166.875" y="-61.5" />
+      <point x="389.375" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalDeskReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="67.5" y="-50.5" />
+      <point x="802.5" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.GetDeskStateAtTimeController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="107.75" y="-39.5" />
+      <point x="1372.6545950155758" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartNewReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="-48.875" y="-61.5" />
+      <point x="2537.1041666666665" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewAllReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="220.125" y="-50.5" />
+      <point x="1702.520833333333" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="0.0" y="50.5" />
+      <point x="1751.9045950155758" y="1139.0" />
+      <point x="2167.881675567422" y="1139.0" />
+      <point x="2167.881675567422" y="1169.0" />
+      <point x="2070.524532710279" y="1169.0" />
+      <point x="0.0" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewAllReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="-73.375" y="-50.5" />
+      <point x="1409.020833333333" y="1290.0" />
+      <point x="927.0474521584329" y="1290.0" />
+      <point x="927.0474521584329" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.EndReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="-55.625" y="-61.5" />
+      <point x="166.875" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.UserReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="84.25" y="-50.5" />
+      <point x="3636.965008900755" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.NewReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="0.0" y="61.5" />
+      <point x="2646.404595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1129.0" />
+      <point x="2675.404595015576" y="1169.0" />
+      <point x="2167.9531041388504" y="1169.0" />
+      <point x="97.42857142857156" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" target="it.sweven.blockcovid.reservations.controllers.NewReservationController" relationship="DEPENDENCY">
+      <point x="194.85714285714266" y="-39.0" />
+      <point x="2265.3816755674216" y="1149.0" />
+      <point x="2777.071261682242" y="1149.0" />
+      <point x="130.66666666666652" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="48.875" y="-61.5" />
+      <point x="4154.0900089007555" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="-167.0" y="72.5" />
+      <point x="2945.904595015576" y="1139.0" />
+      <point x="2167.881675567422" y="1139.0" />
+      <point x="2167.881675567422" y="1169.0" />
+      <point x="2070.524532710279" y="1169.0" />
+      <point x="0.0" y="-39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalDeskReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="-67.5" y="-50.5" />
+      <point x="667.5" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="-62.625" y="-72.5" />
+      <point x="3050.279595015576" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.servicies.ReservationService" target="it.sweven.blockcovid.reservations.repositories.ReservationRepository" relationship="DEPENDENCY">
+      <point x="-156.33333333333348" y="-204.5" />
+      <point x="2070.571261682242" y="456.0" />
+      <point x="1953.237928348909" y="456.0" />
+      <point x="-195.5" y="105.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalReservationsController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="-125.75" y="-50.5" />
+      <point x="1626.1545950155758" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.UserReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="-84.25" y="-50.5" />
+      <point x="3468.465008900755" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.NewReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="DEPENDENCY">
+      <point x="98.0" y="-61.5" />
+      <point x="2744.404595015576" y="931.0" />
+      <point x="2231.904595015576" y="931.0" />
+      <point x="2231.904595015576" y="921.0" />
+      <point x="2344.154595015576" y="921.0" />
+      <point x="117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartNewReservationController" target="it.sweven.blockcovid.reservations.servicies.ReservationService" relationship="TO_ONE">
+      <point x="48.875" y="-61.5" />
+      <point x="2634.8541666666665" y="1290.0" />
+      <point x="3405.5117378727186" y="1290.0" />
+      <point x="3405.5117378727186" y="941.0" />
+      <point x="2221.904595015576" y="941.0" />
+      <point x="2221.904595015576" y="921.0" />
+      <point x="2109.654595015576" y="921.0" />
+      <point x="-117.25" y="204.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ViewPersonalDeskReservationsController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="TO_ONE">
+      <point x="202.5" y="-50.5" />
+      <point x="937.5" y="1310.0" />
+      <point x="1938.5625" y="1310.0" />
+      <point x="1938.5625" y="1300.0" />
+      <point x="2241.024532710279" y="1300.0" />
+      <point x="170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.EndReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="55.625" y="-61.5" />
+      <point x="278.125" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.ModifyReservationController" target="it.sweven.blockcovid.reservations.entities.ReservationBuilder" relationship="TO_ONE">
+      <point x="187.875" y="-72.5" />
+      <point x="3300.779595015576" y="921.0" />
+      <point x="3427.590008900755" y="921.0" />
+      <point x="3427.590008900755" y="456.0" />
+      <point x="3565.590008900755" y="456.0" />
+      <point x="74.5" y="215.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.reservations.controllers.StartReservationController" target="it.sweven.blockcovid.reservations.assemblers.ReservationWithRoomAssembler" relationship="DEPENDENCY">
+      <point x="-146.625" y="-61.5" />
+      <point x="3958.590008900755" y="1320.0" />
+      <point x="1928.5625" y="1320.0" />
+      <point x="1928.5625" y="1300.0" />
+      <point x="1900.024532710279" y="1300.0" />
+      <point x="-170.5" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="2505.5" y="631.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

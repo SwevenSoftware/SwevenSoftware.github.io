@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/lucaz/Documents/GitHub/BlockCOVID-server/src/main/java/it/sweven/blockcovid/rooms</OriginalElement>
+  <nodes>
+    <node x="2739.6339285714284" y="571.9382358058343">it.sweven.blockcovid.rooms.services.DeskService</node>
+    <node x="1859.6339285714284" y="947.0">it.sweven.blockcovid.rooms.controllers.DeleteDeskController</node>
+    <node x="3222.6339285714284" y="936.0">it.sweven.blockcovid.rooms.controllers.NewDeskController</node>
+    <node x="1243.9316745611247" y="924.1235283883315">it.sweven.blockcovid.rooms.controllers.ViewRoomController</node>
+    <node x="257.2431587342611" y="935.1235283883315">it.sweven.blockcovid.rooms.controllers.ListRoomsController</node>
+    <node x="785.2505391320447" y="1252.9051789131822">it.sweven.blockcovid.rooms.assemblers.RoomAssembler</node>
+    <node x="2739.6339285714284" y="936.0">it.sweven.blockcovid.rooms.controllers.ModifyDeskController</node>
+    <node x="2705.6339285714284" y="214.07426201937017">it.sweven.blockcovid.rooms.repositories.DeskRepository</node>
+    <node x="-783.9599016815805" y="946.1235283883315">it.sweven.blockcovid.rooms.controllers.MarkRoomAsCleanController</node>
+    <node x="2497.2585729160123" y="1206.5124978252043">it.sweven.blockcovid.rooms.assemblers.DeskAssembler</node>
+    <node x="-419.44535709260253" y="957.1235283883314">it.sweven.blockcovid.rooms.controllers.DeleteRoomController</node>
+    <node x="2359.6339285714284" y="947.0">it.sweven.blockcovid.rooms.controllers.ViewDeskStateController</node>
+    <node x="1052.2732202084826" y="214.07426201937017">it.sweven.blockcovid.rooms.repositories.RoomRepository</node>
+    <node x="1073.7732202084826" y="577.0">it.sweven.blockcovid.rooms.services.RoomService</node>
+    <node x="-128.36316186278486" y="946.1235283883315">it.sweven.blockcovid.rooms.controllers.ModifyRoomController</node>
+    <node x="744.8012640639009" y="75.92646291248622">it.sweven.blockcovid.rooms.entities.RoomBuilder</node>
+    <node x="76.724254784908" y="1230.3125326219338">it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler</node>
+    <node x="900.6869244485874" y="946.1235283883315">it.sweven.blockcovid.rooms.controllers.NewRoomController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="TO_ONE">
+      <point x="0.0" y="61.5" />
+      <point x="136.87535565541612" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="-246.0" y="-83.5" />
+      <point x="54.15845435264214" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.DeskService" target="it.sweven.blockcovid.rooms.repositories.DeskRepository" relationship="DEPENDENCY">
+      <point x="0.0" y="-116.5" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="144.5" y="-61.5" />
+      <point x="-0.08629575989516525" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.DeskService" target="it.sweven.blockcovid.rooms.repositories.RoomRepository" relationship="DEPENDENCY">
+      <point x="-163.0" y="0.0" />
+      <point x="2777.153511569912" y="688.4382358058343" />
+      <point x="2777.153511569912" y="441.6772313402541" />
+      <point x="1338.2732202084826" y="441.6772313402541" />
+      <point x="141.0" y="61.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.MarkRoomAsCleanController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="-30.000098318419532" y="-61.5" />
+      <point x="-664.96" y="693.5" />
+      <point x="-123.5" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="TO_ONE">
+      <point x="7.142857157305116E-5" y="61.5" />
+      <point x="3506.134" y="1264.0124978252043" />
+      <point x="337.0" y="-15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" target="it.sweven.blockcovid.rooms.controllers.ListRoomsController" relationship="DEPENDENCY">
+      <point x="-15.0" y="-72.5" />
+      <point x="-170.5189039493531" y="72.50000000000011" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" relationship="DEPENDENCY">
+      <point x="-155.5189039493531" y="72.50000000000011" />
+      <point x="0.0" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.RoomService" target="it.sweven.blockcovid.rooms.repositories.RoomRepository" relationship="DEPENDENCY">
+      <point x="0.0" y="-116.5" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewDeskStateController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="-14.999928571428427" y="-50.5" />
+      <point x="2524.634" y="733.4382358058343" />
+      <point x="-163.0" y="45.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="-14.999928571428427" y="-50.5" />
+      <point x="2084.634" y="703.4382358058343" />
+      <point x="-163.0" y="15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="DEPENDENCY">
+      <point x="-14.999642907397458" y="50.5" />
+      <point x="-304.445" y="1506.4853273792264" />
+      <point x="1070.2505391320447" y="1506.4853273792264" />
+      <point x="30.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="15.000161862784864" y="-61.5" />
+      <point x="65.137" y="783.5" />
+      <point x="-123.5" y="90.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" target="it.sweven.blockcovid.rooms.controllers.ViewRoomController" relationship="DEPENDENCY">
+      <point x="0.0" y="72.5" />
+      <point x="386.724254784908" y="1566.4853273792264" />
+      <point x="1572.4316745611247" y="1566.4853273792264" />
+      <point x="75.0" y="83.50000000000011" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" relationship="DEPENDENCY">
+      <point x="60.0" y="83.50000000000011" />
+      <point x="1557.4316745611247" y="1551.4853273792264" />
+      <point x="416.724254784908" y="1551.4853273792264" />
+      <point x="30.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="15.000071428571573" y="-61.5" />
+      <point x="83.50007142857157" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.RoomService" target="it.sweven.blockcovid.rooms.entities.RoomBuilder" relationship="CREATE">
+      <point x="-123.5" y="-15.0" />
+      <point x="883.1869244485874" y="678.5" />
+      <point x="-5.614339615313497" y="248.49999999999994" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="30.000071428571573" y="-61.5" />
+      <point x="3536.134" y="718.4382358058343" />
+      <point x="163.0" y="30.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.RoomService" target="it.sweven.blockcovid.rooms.repositories.DeskRepository" relationship="TO_ONE">
+      <point x="123.5" y="-20.061764194165676" />
+      <point x="2653.9236403385225" y="673.4382358058343" />
+      <point x="2653.9236403385225" y="321.66908310618794" />
+      <point x="2712.1339285714284" y="321.66908310618794" />
+      <point x="-190.5" y="83.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="0.0" y="-72.5" />
+      <point x="542.2431587342611" y="944.2660789885749" />
+      <point x="737.1210802096424" y="944.2660789885749" />
+      <point x="737.1210802096424" y="897.5749869512265" />
+      <point x="1130.690367105492" y="897.5749869512265" />
+      <point x="1130.690367105492" y="768.5" />
+      <point x="-123.5" y="75.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.RoomService" target="it.sweven.blockcovid.rooms.repositories.RoomRepository" relationship="TO_ONE">
+      <point x="-45.00022020848269" y="-116.5" />
+      <point x="-45.00022020848269" y="61.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="-29.999642907397458" y="-50.5" />
+      <point x="-319.445" y="738.5" />
+      <point x="-123.5" y="45.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.DeskService" target="it.sweven.blockcovid.rooms.repositories.DeskRepository" relationship="TO_ONE">
+      <point x="-15.0" y="-116.5" />
+      <point x="-15.0" y="83.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.DeskService" target="it.sweven.blockcovid.rooms.repositories.RoomRepository" relationship="TO_ONE">
+      <point x="-163.0" y="105.0" />
+      <point x="3053.844690599083" y="793.4382358058343" />
+      <point x="3053.844690599083" y="651.7088383691934" />
+      <point x="3142.4255639969842" y="651.7088383691934" />
+      <point x="3142.4255639969842" y="73.40227918575678" />
+      <point x="1265.5955460186742" y="73.40227918575678" />
+      <point x="1265.5955460186742" y="275.07426201937017" />
+      <point x="145.0" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="TO_ONE">
+      <point x="7.142857157305116E-5" y="50.5" />
+      <point x="2099.634" y="1264.0124978252043" />
+      <point x="-337.0" y="-15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="TO_ONE">
+      <point x="-14.999924448587535" y="61.500000000000114" />
+      <point x="-2.5635391320447525" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.MarkRoomAsCleanController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="DEPENDENCY">
+      <point x="-60.00009831841953" y="61.500000000000114" />
+      <point x="-694.96" y="1536.4853273792264" />
+      <point x="1085.2505391320447" y="1536.4853273792264" />
+      <point x="45.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="30.00032543887528" y="-83.5" />
+      <point x="1527.432" y="718.4382358058343" />
+      <point x="-163.0" y="30.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" target="it.sweven.blockcovid.rooms.controllers.NewRoomController" relationship="DEPENDENCY">
+      <point x="310.0" y="-67.40735370875154" />
+      <point x="902.0" y="1235.4051789131822" />
+      <point x="-150.68692444858743" y="61.500000000000114" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="TO_ONE">
+      <point x="-15.0" y="61.500000000000114" />
+      <point x="35.136838137215136" y="1446.4853273792264" />
+      <point x="1040.2505391320447" y="1446.4853273792264" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewDeskStateController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="TO_ONE">
+      <point x="7.142857157305116E-5" y="50.5" />
+      <point x="-294.6245729160123" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="DEPENDENCY">
+      <point x="-30.0" y="-72.5" />
+      <point x="512.2431587342611" y="43.426462912486215" />
+      <point x="3551.134" y="43.426462912486215" />
+      <point x="3551.134" y="703.4382358058343" />
+      <point x="163.0" y="15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.MarkRoomAsCleanController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="-15.000098318419532" y="-61.5" />
+      <point x="-649.96" y="708.5" />
+      <point x="-123.5" y="15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="45.00032543887528" y="-83.5" />
+      <point x="1542.432" y="748.4382358058343" />
+      <point x="-163.0" y="60.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="0.0" y="-61.5" />
+      <point x="3506.1339285714284" y="733.4382358058343" />
+      <point x="163.0" y="45.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" target="it.sweven.blockcovid.rooms.controllers.NewDeskController" relationship="DEPENDENCY">
+      <point x="337.0" y="0.0" />
+      <point x="3521.134" y="1279.0124978252043" />
+      <point x="15.000071428571573" y="61.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="DEPENDENCY">
+      <point x="30.000071428571573" y="61.5" />
+      <point x="3536.134" y="1294.0124978252043" />
+      <point x="337.0" y="15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="DEPENDENCY">
+      <point x="15.000071428571573" y="61.5" />
+      <point x="151.8754270839877" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="TO_ONE">
+      <point x="3.5709260254179753E-4" y="50.5" />
+      <point x="-289.445" y="1491.4853273792264" />
+      <point x="1010.2505391320447" y="1491.4853273792264" />
+      <point x="-30.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="129.5" y="-61.5" />
+      <point x="-15.086295759895165" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="7.142857157305116E-5" y="-50.5" />
+      <point x="2099.634" y="763.4382358058343" />
+      <point x="-163.0" y="75.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewDeskStateController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="7.142857157305116E-5" y="-50.5" />
+      <point x="2539.634" y="778.4382358058343" />
+      <point x="-163.0" y="90.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="1.6186278486429728E-4" y="-61.5" />
+      <point x="50.137" y="768.5" />
+      <point x="1112.024821666763" y="768.5" />
+      <point x="1112.024821666763" y="753.5" />
+      <point x="-123.5" y="60.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" relationship="TO_ONE">
+      <point x="90.0" y="83.50000000000011" />
+      <point x="1587.4316745611247" y="1581.4853273792264" />
+      <point x="371.724254784908" y="1581.4853273792264" />
+      <point x="-15.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="-15.0" y="-72.5" />
+      <point x="527.2431587342611" y="58.426462912486215" />
+      <point x="3157.6280421247543" y="58.426462912486215" />
+      <point x="3157.6280421247543" y="673.4382358058343" />
+      <point x="163.0" y="-15.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" target="it.sweven.blockcovid.rooms.controllers.NewRoomController" relationship="DEPENDENCY">
+      <point x="-17.563539132044752" y="-72.5" />
+      <point x="-29.999924448587535" y="61.500000000000114" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.NewRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="DEPENDENCY">
+      <point x="7.555141246484709E-5" y="61.500000000000114" />
+      <point x="12.436460867955248" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.assemblers.RoomWithDesksAssembler" relationship="TO_ONE">
+      <point x="0.0" y="72.50000000000011" />
+      <point x="155.5189039493531" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="DEPENDENCY">
+      <point x="0.0" y="-50.5" />
+      <point x="-289.44535709260253" y="753.5" />
+      <point x="1087.9814417444757" y="753.5" />
+      <point x="1087.9814417444757" y="798.5" />
+      <point x="-123.5" y="105.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyDeskController" target="it.sweven.blockcovid.rooms.services.DeskService" relationship="TO_ONE">
+      <point x="0.0" y="-61.5" />
+      <point x="68.5" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.services.RoomService" target="it.sweven.blockcovid.rooms.repositories.DeskRepository" relationship="DEPENDENCY">
+      <point x="123.5" y="-35.061764194165676" />
+      <point x="2636.5976338224204" y="658.4382358058343" />
+      <point x="2636.5976338224204" y="297.07426201937017" />
+      <point x="-197.0" y="0.0" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" target="it.sweven.blockcovid.rooms.controllers.ViewRoomController" relationship="DEPENDENCY">
+      <point x="247.5" y="-72.5" />
+      <point x="-209.6811354290801" y="83.50000000000011" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ModifyRoomController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="DEPENDENCY">
+      <point x="-30.0" y="61.500000000000114" />
+      <point x="20.136838137215136" y="1461.4853273792264" />
+      <point x="1055.2505391320447" y="1461.4853273792264" />
+      <point x="15.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" target="it.sweven.blockcovid.rooms.controllers.ListRoomsController" relationship="DEPENDENCY">
+      <point x="-220.50738039778355" y="-72.5" />
+      <point x="277.5" y="72.50000000000011" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.MarkRoomAsCleanController" target="it.sweven.blockcovid.rooms.assemblers.RoomAssembler" relationship="TO_ONE">
+      <point x="-45.00009831841953" y="61.500000000000114" />
+      <point x="-679.96" y="1521.4853273792264" />
+      <point x="995.2505391320447" y="1521.4853273792264" />
+      <point x="-45.0" y="72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewRoomController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="3.254388752793602E-4" y="-83.5" />
+      <point x="1497.432" y="718.4382358058343" />
+      <point x="123.5" y="24.938235805834324" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ListRoomsController" target="it.sweven.blockcovid.rooms.services.RoomService" relationship="TO_ONE">
+      <point x="178.67284754387185" y="-72.5" />
+      <point x="720.916006278133" y="872.5" />
+      <point x="1114.0384004098473" y="872.5" />
+      <point x="1114.0384004098473" y="786.0859479208954" />
+      <point x="1167.1869244485874" y="786.0859479208954" />
+      <point x="-30.086295759895165" y="116.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.ViewDeskStateController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="DEPENDENCY">
+      <point x="-14.999928571428427" y="50.5" />
+      <point x="-309.6245729160123" y="-72.5" />
+    </edge>
+    <edge source="it.sweven.blockcovid.rooms.controllers.DeleteDeskController" target="it.sweven.blockcovid.rooms.assemblers.DeskAssembler" relationship="DEPENDENCY">
+      <point x="-14.999928571428427" y="50.5" />
+      <point x="2084.634" y="1279.0124978252043" />
+      <point x="-337.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7902383134738773" showDependencies="true" x="2333.6164240561384" y="583.5903845038565" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
