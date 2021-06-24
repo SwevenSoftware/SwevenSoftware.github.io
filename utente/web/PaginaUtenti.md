@@ -36,4 +36,9 @@ L'amministratore, dopo aver cliccato sul pulsante di eliminazione utente, potrà
 
 <img src="/assets/web/deleteUser.gif">
 
+## Calendario utente
+L'amministratore, dopo aver cliccato su un nome utente, potrà visionare un calendario dettagliato delle prenotazioni effettuate dall'utente. Il calendario è settimanale e le giornate hanno durata 00:00-23:59. Cliccare su una prenotazione aprirà un pop-up con informazioni più dettagliate.
+
+<img src="/assets/web/calendarUser.gif">
+
 {% include prev_next.liquid %}
