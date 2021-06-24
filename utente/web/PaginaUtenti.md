@@ -19,7 +19,7 @@ grand_parent: Manuale Utente
 
 A login effettuato l'utente si troverà sulla pagina utenti. In questa
 pagina l'amministratore può visualizzare un elenco di tutti gli utenti
-presenti nel database e una legenda che facilita la comprensione delle varie informazioni ad essi associate.
+presenti nel database e una legenda che facilita la comprensione delle varie informazioni visualizzate.
 
 ## Creazione utente
 L'amministratore, dopo aver cliccato sul pulsante di creazione nuovo utente, potrà inserire i nuovi dati tramite una finestra a pop-up.
