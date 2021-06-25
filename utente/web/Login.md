@@ -22,7 +22,8 @@ credenziali. Il sistema verificherà che queste corrispondano ad un
 profilo amministratore, così che tutte le altre funzionalità
 dell'applicazione siano disponibili.
 
-<img src="/assets/web/login.gif">
+[![](/assets/web/login.gif)](/assets/web/login.gif)
+> Click per ingrandire
 
 ## Primo login
 Il primo login al primo avvio dell'applicazione può essere fatto da un
