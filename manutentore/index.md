@@ -26,13 +26,7 @@ All'interno del progetto vengono considerate 3 tipologie di utenti (si noti che 
 - **Cleaner**: tipologia di utente utilizzato dagli addetti alle pulizie per segnalare la sanificazione delle stanze
 - **Admin**: utenti che hanno permessi di modifica di stanze e account, nonché di visualizzazione di tutte le prenotazioni presenti nel sistema 
 
-## Riferimenti normativi
-- [Capitolato d'appalto C1](https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C1.pdf)
-- Norme di progetto v3.0.0
-
 ## Riferimenti informativi
-- Analisi dei Requisiti v3.0.0
-- [Lezioni Design Pattern e Diagrammi UML](https://www.math.unipd.it/~rcardin/swea/2021/)
 - [Documentazione Spring](https://spring.io/projects/)
 - [Documentazione Android](https://developer.android.com/docs)
 - [Documentazione React](https://reactjs.org/docs/)
