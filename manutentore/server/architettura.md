@@ -82,14 +82,14 @@ Il diagramma UML per il pacchetto è il segente (click per ingrandire):
 
 Il server si basa su un'architettura a layer. Ogni package precendetemente illustrato contiene al proprio interno 3 package principali: `controller`, `service` e `repository`
 
-### CONTROLLERS
+### Controllers
 contiene i controller (pricipalmente `RestController`) che si occupano di interfacciarsi con le richieste esterne dei client: controllare i dati in ingresso e passare le informazioni al service layer che si occuperà invece di gestire la logica delle richieste. Nel caso in cui il service layer risponda con eccezioni sarà compito del controller intercettarle e ritornare i messaggi di errore al client richiedente. Nella pratica i controller sono delle classi annotate tramite annotazioni _spring_. Sarà infatti spring ad occuparsi di eseguire un server [tomcat](http://tomcat.apache.org/) che esporrà i metodi delle classi annotate di conseguenza.
 
-### SERVICES
-Contiene le classi indicate come service, al loro interno è implementata la business logic: ricevono i dati validati dai controller e si interfacciano con le repositories per recuperare i dati richiesti o modificarli. Dato che non devono conservare uno stato interno, gestito invece tramite le _repository_ tutte le funzioni sono generalmente esposte tramite un'unica classe di service per ogni macro package descritto nel capitolo del [common reuse principle](#common-reuse-principle), che viene poi iniettata dove necessario da spring. Ciò non vieta per funzioni più avanzate o qualora necessario di avere più service ed utilizzare solo quelli necessari.
+### Services
+contiene le classi indicate come service, al loro interno è implementata la business logic: ricevono i dati validati dai controller e si interfacciano con le repositories per recuperare i dati richiesti o modificarli. Dato che non devono conservare uno stato interno, gestito invece tramite le _repository_ tutte le funzioni sono generalmente esposte tramite un'unica classe di service per ogni macro package descritto nel capitolo del [common reuse principle](#common-reuse-principle), che viene poi iniettata dove necessario da spring. Ciò non vieta per funzioni più avanzate o qualora necessario di avere più service ed utilizzare solo quelli necessari.
 
-### REPOSITORIES
-Contiene i repository che si interfacciano con MongoDB per la persistenza dei dati. Tali repository sono interfaccie che presentano solo la firma dei metodi richiesti, tali metodi sono implementati autonomamente da Spring.
+### Repositories
+contiene i repository che si interfacciano con MongoDB per la persistenza dei dati. Tali repository sono interfaccie che presentano solo la firma dei metodi richiesti, tali metodi sono implementati autonomamente da Spring.
 
 ## Altri package
 
