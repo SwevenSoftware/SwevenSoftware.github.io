@@ -69,4 +69,9 @@ Schema dell'architettura per la pagina dei report:
 
 ![](/assets/web/reports_scheme.png)
 
+
+# Estensione Web client
+
+È possibile aggiungere una nuova pagina creando un apposito componente. Se l'interazione con l'utente provoca cambiamenti al sistema (per esempio sono immesse informazioni necessarie ad altre componenti), bisogna sviluppare le actions e conseguentemente il/i reducer/reducers che modificheranno lo stato dell'applicazione.
+
 {% include prev_next.liquid %}
