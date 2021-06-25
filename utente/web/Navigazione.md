@@ -20,6 +20,7 @@ La navigazione del pannello amministratore è disponibile tramite un
 menù ad hamburger sul lato sinistro della pagina. In questo modo è
 possibile muoversi tra le varie sezioni del sito.
 
-<img src="/assets/web/hamburger.gif">
+[![](/assets/web/hamburger.gif)](/assets/web/hamburger.gif)
+> Click per ingrandire
 
 {% include prev_next.liquid %}

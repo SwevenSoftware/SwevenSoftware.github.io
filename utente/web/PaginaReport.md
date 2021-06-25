@@ -26,16 +26,19 @@ già generati oppure crearne di nuovi al momento.
 L'amministratore può scaricare un report già generato semplicemente
 cliccando sul nome di quest'ultimo.
 
-<img src="/assets/web/downloadReport.gif">
+[![](/assets/web/downloadReport.gif)](/assets/web/downloadReport.gif)
+> Click per ingrandire
 
 ## Generazione report
 L'amministratore tramite due pulsanti in alto a destra potrà generare
 due tipi di report: il report sull'utilizzo delle stanze (icona marrone)
 oppure il report sulla sanificazione delle stanze (icona azzurra).
 
-<img src="/assets/web/createUsageReport.gif">
+[![](/assets/web/createUsageReport.gif)](/assets/web/createUsageReport.gif)
+> Click per ingrandire
 
-<img src="/assets/web/createCleanerReport.gif">
+[![](/assets/web/createCleanerReport.gif)](/assets/web/createCleanerReport.gif)
+> Click per ingrandire
 
 ## Verifica hashcode report
 Ogni report è caratterizzato da informazioni peculiari quali:
@@ -49,6 +52,7 @@ L'amministratore, dopo aver cliccato l'anzidetto link, verrà reindirizzato su E
 
 Etherscan è un servizio che monitora le transazioni sulla rete Ethereum, viene usato come fonte terza per dimostrare che è effettivamente chiamato il contratto indicato nei report.
 
-<img src="/assets/web/checkHashReport.gif">
+[![](/assets/web/checkHashReport.gif)](/assets/web/checkHashReport.gif)
+> Click per ingrandire
 
 {% include prev_next.liquid %}
