@@ -15,16 +15,16 @@ Lo scopo del Manuale Manutentore è presentare le procedure di installazione e s
 
 Il prodotto BlockCOVID permette di tracciare l'utilizzo di postazioni e stanze di lavoro all'interno di aziende.
 Il progetto si articola su 3 moduli:
-- [Server](/manutentore/server): espone le API utilizzate dai client Android e Web, fornisce la business logic e permette di persistere i dati su database e servizio blockchain,
-- [Android](/manutentore/android): permette ai dipendenti di prenotare ed utilizzare le postazioni di lavoro, e agli addetti alle pulizie di segnalare le stanze sanificate,
+- [Server](/manutentore/server): espone le API utilizzate dai client Android e Web, fornisce la business logic e permette di persistere i dati su database e servizio blockchain;
+- [Android](/manutentore/android): permette ai dipendenti di prenotare ed utilizzare le postazioni di lavoro, e agli addetti alle pulizie di segnalare le stanze sanificate;
 - [Web](/manutentore/web): mette a disposizione degli amministratori una piattaforma web per reperire informazioni sull'utilizzo delle postazioni, con possibilità di creare e modificare stanze e di generare i report che verranno aggiunti alla blockchain.
 
 ## Tipologie di utenti
 
 All'interno del progetto vengono considerate 3 tipologie di utenti (si noti che ogni account può essere associato a più di una tipologia di utente):
-- **User**: generalmente associato ad un dipendente, permette di effettuare prenotazioni ed utilizzare le postazioni
-- **Cleaner**: tipologia di utente utilizzato dagli addetti alle pulizie per segnalare la sanificazione delle stanze
-- **Admin**: utenti che hanno permessi di modifica di stanze e account, nonché di visualizzazione di tutte le prenotazioni presenti nel sistema 
+- **User**: generalmente associato ad un dipendente, permette di effettuare prenotazioni ed utilizzare le postazioni:
+- **Cleaner**: tipologia di utente utilizzato dagli addetti alle pulizie per segnalare la sanificazione delle stanze:
+- **Admin**: utenti che hanno permessi di modifica di stanze e account, nonché di visualizzazione di tutte le prenotazioni presenti nel sistema.
 
 ## Riferimenti informativi
 - [Documentazione Spring](https://spring.io/projects/)

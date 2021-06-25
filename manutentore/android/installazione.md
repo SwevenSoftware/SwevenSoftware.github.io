@@ -33,36 +33,19 @@ Per preparare l'ambiente di lavoro per lo sviluppo dell'applicazione mobile Bloc
 1. scaricare ed installare Android Studio, disponibile al seguente link: [Android Studio](https://developer.android.com/studio);
 2. scaricare l'ultima release dell'applicazione, in formato .zip, disponibile al seguente link: [BlockCOVID-Android](https://github.com/SwevenSoftware/BlockCOVID-android/releases);
 3. estrarne il contenuto in una cartella qualsiasi;
-4. tramite Android Studio, aprire la cartella in cui è stata estratta la release come progetto;
+4. tramite Android Studio, aprire la cartella in cui è stata estratta la release come progetto.
 
-### Apk bundle
+### APK bundle
 
-#### Android studio
+#### Android Studio
 {: .no_toc }
-Android studio offre la possibilità di realizzare un bundle `apk`
+Android Studio offre la possibilità di realizzare un bundle `apk`
 della propria applicazione direttamente all'interno dell'IDE. Questa
 funzione è disponibile all'interno di *Build > Generate signed
-bundle/APK*
+bundle/APK*.
 
-#### Gradle
-{: .no_toc }
-Gradle permette di generare un bundle non firmato della propria
-applicazione tramite 
-
-```sh
-./gradlew assemble
-```
-
-nella root del progetto. In questo caso per l'installazione su un
-dispositivo è necessario firmare l'applicativo generato (rialsciato da
-gradle nel percorso `app/build/output/apk`). È possibile firmare l'apk
-generato tramite il tool apksigner rilasciato ufficialmente dal team
-di sviluppo android. Maggiori informazioni sul suo utilizzo nella
-[documentazione
-ufficiale](https://developer.android.com/studio/command-line/apksigner)
-
-### Testing
-È possibile testare il comportamento dell'applicazione sempre tramite Android Studio:
+## Esecuzione
+È possibile eseguire l'applicazione per testarne il comportamento sempre tramite Android Studio:
 
 - Attivare la modalità debug sul proprio dispositivo Android;
 - fare la build del progetto tramite Android Studio tramite ***Build >
