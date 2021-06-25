@@ -82,13 +82,13 @@ Il diagramma UML per il pacchetto è il segente (click per ingrandire):
 
 Il server si basa su un'architettura a layer. Ogni package precendetemente illustrato contiene al proprio interno 3 package principali: `controller`, `service` e `repository`
 
-### CONTROLLERS
-contiene i controller (pricipalmente `RestController`) che si occupano di interfacciarsi con le richieste esterne dei client: controllare i dati in ingresso e passare le informazioni al service layer che si occuperà invece di gestire la logica delle richieste. Nel caso in cui il service layer risponda con eccezioni sarà compito del controller intercettarle e ritornare i messaggi di errore al client richiedente. Nella pratica i controller sono delle classi annotate tramite annotazioni _spring_. Sarà infatti spring ad occuparsi di eseguire un server [tomcat](http://tomcat.apache.org/) che esporrà i metodi delle classi annotate di conseguenza.
+### Controllers
+Contiene i controller (pricipalmente `RestController`) che si occupano di interfacciarsi con le richieste esterne dei client: controllare i dati in ingresso e passare le informazioni al service layer che si occuperà invece di gestire la logica delle richieste. Nel caso in cui il service layer risponda con eccezioni sarà compito del controller intercettarle e ritornare i messaggi di errore al client richiedente. Nella pratica i controller sono delle classi annotate tramite annotazioni _spring_. Sarà infatti spring ad occuparsi di eseguire un server [tomcat](http://tomcat.apache.org/) che esporrà i metodi delle classi annotate di conseguenza.
 
-### SERVICES
+### Services
 Contiene le classi indicate come service, al loro interno è implementata la business logic: ricevono i dati validati dai controller e si interfacciano con le repositories per recuperare i dati richiesti o modificarli. Dato che non devono conservare uno stato interno, gestito invece tramite le _repository_ tutte le funzioni sono generalmente esposte tramite un'unica classe di service per ogni macro package descritto nel capitolo del [common reuse principle](#common-reuse-principle), che viene poi iniettata dove necessario da spring. Ciò non vieta per funzioni più avanzate o qualora necessario di avere più service ed utilizzare solo quelli necessari.
 
-### REPOSITORIES
+### Repositories
 Contiene i repository che si interfacciano con MongoDB per la persistenza dei dati. Tali repository sono interfaccie che presentano solo la firma dei metodi richiesti, tali metodi sono implementati autonomamente da Spring.
 
 ## Altri package
@@ -99,33 +99,33 @@ All'interno di questi package possono essere presenti, oltre ai package associab
 racchiudono classi che implementano l'interfaccia `RepresentationModelAssembler`, attraverso le quali Spring restituisce link contestuali ai dati richiesti dai client, per avere una api restful.
 
 ### dto
-insieme di _data class_ che forniscono una rappresentazione dei dati persistiti più adeguata alle richieste dei client.
+Insieme di _data class_ che forniscono una rappresentazione dei dati persistiti più adeguata alle richieste dei client.
 
 ### entities
-insieme di _data class_ utilizzate per la rappresentazione dei dati persistiti.
+Insieme di _data class_ utilizzate per la rappresentazione dei dati persistiti.
 
 ### exceptions
-racchiudono classi `Throwable`.
+Racchiudono classi `Throwable`.
 
 ## Package specifici
 In aggiunta a questi package possono essere inoltre presenti package specifici per singole funzionalità:
 ### users.security
-contiene classi relative la gestione dell'autenticazione mediante token
+Contiene classi relative la gestione dell'autenticazione mediante token;
 ### blockchain.documents
-contiene classi per la creazione di report PDF 
+Contiene classi per la creazione di report PDF;
 ### configurations
-contiene classi relative alla configurazione del server
+Contiene classi relative alla configurazione del server;
 
 ## Esecuzione
 
 La classe `it.sweven.blockcovid.Server` è il punto d'accesso per l'esecuzione del server, gestita da Spring mediante l'annotazione `@SpringBootApplication`.
 
 Quando un client effettua una chiamata ad una REST API esposta dal server:
-1. Spring invoca il relativo metodo presente all'interno di un controller, utilizzando un _dto_ od una _entity_ per elaborare i dati richiesti
-2. Il controller chiamerà poi un metodo di un service per elaborare tali dati
-3. Il service quindi utilizzerà un repository per ottenere o salvare i dati persistiti richiesti
-4. Il repository restituirà l'_entity_ richiesta al service 
-5. Il service elaborerà e restituirà al controller l'_entity_, eventualmente convertendola in _dto_ se necessario
+1. Spring invoca il relativo metodo presente all'interno di un controller, utilizzando un _dto_ od una _entity_ per elaborare i dati richiesti;
+2. Il controller chiamerà poi un metodo di un service per elaborare tali dati;
+3. Il service quindi utilizzerà un repository per ottenere o salvare i dati persistiti richiesti;
+4. Il repository restituirà l'_entity_ richiesta al service;
+5. Il service elaborerà e restituirà al controller l'_entity_, eventualmente convertendola in _dto_ se necessario;
 6. Il controller poi invierà la risposta al client, utilizzando un'_assembler_ per aggiungere link contestuali ai dati restituiti dal service.
 
 Per esempio per l'avvio dell'utilizzo di un banco libero è rappresentato dal seguente diagramma di sequenza (click per ingrandire). È possibile notare come ogni modulo si interfacci solamente con se stesso o con un modulto di un layer sottostante (_controller_ con _service_, _service_ con _repository_, ...), mentre la gestione degli `EntityModel` è affidata ad un modulo assembler che permette di rilasciare i dati e i collegamenti in maniera consistente tramite tutta la API.
