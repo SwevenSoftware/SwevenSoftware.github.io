@@ -32,9 +32,10 @@ funzionalità inerenti alla gestione degli account:
 - Informazioni singolo account
 - Lista utenti registrati
 
-Il diagramma UML del pacchetto utenti è il seguente (click per ingrandire)
+Il diagramma UML del pacchetto utenti è il seguente
 
 [![](/assets/server/users_package.svg)](/assets/server/users_package.svg)
+> Click per ingrandire
 
 [Download UML](/download/user_diagram.uml){: .btn .btn-primary }
 
@@ -46,9 +47,10 @@ Il package rooms si occupa della gestione delle stanze e delle postazioni:
 - Informazioni riguardanti lo stato di una stanza/postazione
 - Segnalazione stanza come pulita
 
-Il diagramma UML che descrive il pacchetto rooms (click per ingrandire):
+Il diagramma UML che descrive il pacchetto rooms:
 
 [![](/assets/server/rooms_package.svg)](/assets/server/rooms_package.svg)
+> Click per ingrandire
 
 [Download UML](/download/room_diagram.uml){: .btn .btn-primary }
 
@@ -61,9 +63,10 @@ Il package contiene layer che realizzano funzionalità inerenti all'utilizzo e l
 - Lista prenotazioni
 - Segnalazione inizio e fine utilizzo postazione
 
-Di seguito il diagramma UML (click per ingrandire)
+Di seguito il diagramma UML
 
 [![](/assets/server/reservations_package.svg)](/assets/server/reservations_package.svg)
+> Click per ingrandire
 
 [Download UML](/download/reservations_diagram.uml){: .btn .btn-primary }
 
@@ -72,9 +75,10 @@ Il package di blockchain permette di interfacciarsi con la blockchain, generando
 - Generazione report PDF di utilizzo e pulizia delle stanze
 - Lista report generati
 
-Il diagramma UML per il pacchetto è il segente (click per ingrandire):
+Il diagramma UML per il pacchetto è il segente:
 
 [![](/assets/server/blockchain_package.svg)](/assets/server/blockchain_package.svg)
+> Click per ingrandire
 
 [Download UML](/download/blockchain_diagram.uml){: .btn .btn-primary }
 
@@ -128,13 +132,15 @@ Quando un client effettua una chiamata ad una REST API esposta dal server:
 5. Il service elaborerà e restituirà al controller l'_entity_, eventualmente convertendola in _dto_ se necessario;
 6. Il controller poi invierà la risposta al client, utilizzando un'_assembler_ per aggiungere link contestuali ai dati restituiti dal service.
 
-Per esempio per l'avvio dell'utilizzo di un banco libero è rappresentato dal seguente diagramma di sequenza (click per ingrandire). È possibile notare come ogni modulo si interfacci solamente con se stesso o con un modulto di un layer sottostante (_controller_ con _service_, _service_ con _repository_, ...), mentre la gestione degli `EntityModel` è affidata ad un modulo assembler che permette di rilasciare i dati e i collegamenti in maniera consistente tramite tutta la API.
+Per esempio per l'avvio dell'utilizzo di un banco libero è rappresentato dal seguente diagramma di sequenza. È possibile notare come ogni modulo si interfacci solamente con se stesso o con un modulto di un layer sottostante (_controller_ con _service_, _service_ con _repository_, ...), mentre la gestione degli `EntityModel` è affidata ad un modulo assembler che permette di rilasciare i dati e i collegamenti in maniera consistente tramite tutta la API.
 
 [![](/assets/server/newReservationSequence.png)](/assets/server/newReservationSequence.png)
+> Click per ingrandire
 
 ### Interazione con la blockchain ethereum
 La bockchain ethereum si occupa tramite il contratto in `src/main/solidity/DocumentContract.sol` di attestare l'esistenza di un hash in un dato momento. Registrando l'hash di un documento al momento della sua creazione è possibile dimostrarne l'esistenza in un dato momento. Il contratto scritto in solidity viene transpilato dal plugin `web3j` di gradle in una libreria java. La classe `BlockchainConfiguration` nel package `it.sweven.blockcovid.configurations` si occupa di gestire le informazioni di deploy del contratto in base all'ambiente di esecuzione, garantendo che le calssi che poi necessitano di interfacciarsi con la blockchain possano richiedere un oggetto di tipo `DocumentContract` che rappresenta un'istanza attiva del contratto sulla blockchain. Attraverso tale oggetto è possibile chiamare i metodi del contratto in solidity tramite RPC, attendendo una risposta dalla blockchain. Ad esempio il controller `AutomaticUsageController`, che si occupa ogni giorno a mezzanotte UTC di generare e firmare un nuovo documento sulla blockchain, utilizza service che si occupano di interfacciarsi col `DocumentContract` e che tramite chiamate sincrone creano i report e ne registrano l'hash. Il tutto con il seguente diagramma di sequenza:
 
 [![](/assets/server/registerContractSequence.png)](/assets/server/registerContractSequence.png)
+> Click per ingrandire
 
 {% include prev_next.liquid %}

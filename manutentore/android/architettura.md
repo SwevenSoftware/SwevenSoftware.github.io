@@ -20,12 +20,13 @@ nav_order: 3
 ## Diagramma dei pacchetti
 Vediamo qui il nostro diagramma dei package:
 
-![](/assets/android/package_diagram.png)
+[![](/assets/android/package_diagram.png)](/assets/android/package_diagram.png)
+> Click per ingrandire
 
-I package all'interno di "ui" gestiscono i file della View e del Viewmodel e eventuali altre classi. 
-Il package "data" gestisce il Model con le sue data class e le repositories. 
-Il package "services" contiene le interfacce API, il NetworkClient e le data class per le risposte del server.
-Infine il package "res" contiene tutti i file xml e png per gestire l'aspetto, la navigazione e le icone dell'applicazione.
+I package all'interno di `ui` gestiscono i file della View e del Viewmodel e eventuali altre classi. 
+Il package `data` gestisce il Model con le sue data class e le repositories. 
+Il package `services` contiene le interfacce API, il NetworkClient e le data class per le risposte del server.
+Infine il package `res` contiene tutti i file xml e png per gestire l'aspetto, la navigazione e le icone dell'applicazione.
 
 ## Pattern architetturale: MVVM
 L'architettura scelta per l'applicazione mobile è il MVVM (Model View ViewModel).
@@ -36,12 +37,14 @@ Nello specifico quindi ogni funzionalità ricrea il MVVM, in cui si va a separar
 - il ViewModel fa da intermediario tra il Model e la View grazie a LiveData. Invoca i metodi del Model per poi fornire i dati ottenuti alla View in una forma facilmente utilizzabile.
 - il Model comunica con il server e contiene dati e logica di validazione.
 
-![](/assets/android/MVVM.png)
+[![](/assets/android/MVVM.png)](/assets/android/MVVM.png)
+> Click per ingrandire
 
 ## Diagramma delle classi
 Vediamo ora un diagramma delle classi, in questo caso della funzionalità UserRooms ma utilizzato in generale da quasi tutte le pagine:
 
-![](/assets/android/class_diagram.png)
+[![](/assets/android/class_diagram.png)](/assets/android/class_diagram.png)
+> Click per ingrandire
 
 Da questo diagramma possiamo vedere come sono implementati i metodi e le classi del MVVM.
 Per prima cosa viene creato il Model, per gestire gli oggetti in entrata dal lato server.
@@ -56,11 +59,11 @@ Come introdotto prima, ogni funzionalità ha dei bisogni aggiuntivi propri, in q
 ## Espansione
 Vista la natura modulare di questa applicazione è possibile estenderla in modo semplice visto che ogni pagina è indipendente dalle altre. Se si volessero aggiungere ulteriori funzionalità 
 è sufficiente seguire i pattern già utilizzati per le altre pagine e quindi avere:
-- un file .xml all'interno del package "layout";
-- creare un nuovo package all'interno di "ui", contenente almeno un Fragment ed un ViewModel che comunicano con il layout tramite data binding;
-- se si desidera utilizzare API del server, creare un'interfaccia all'interno di "apis", una Repository all'interno di "repositories" ed eventuali data class all'interno di "model" e "gsonReceive".
-Infine, una volta creata la nuova pagina, è possibile inserirla all'interno dei file nel package "navigation" per renderla accessibile da altre pagine tramite la navigazione standard di Android.
+- un file .xml all'interno del package `layout`;
+- creare un nuovo package all'interno di `ui`, contenente almeno un Fragment ed un ViewModel che comunicano con il layout tramite data binding;
+- se si desidera utilizzare API del server, creare un'interfaccia all'interno di `apis`, una Repository all'interno di `repositories` ed eventuali data class all'interno di `model` e `gsonReceive`.
+Infine, una volta creata la nuova pagina, è possibile inserirla all'interno dei file nel package `navigation` per renderla accessibile da altre pagine tramite la navigazione standard di Android.
 
-Seguendo la struttura dei package appena definita, è anche possibile aggiungere test di unità delle rispettive classi all'interno della cartella "com.sweven.blockcovid (test)".
+Seguendo la struttura dei package appena definita, è anche possibile aggiungere test di unità delle rispettive classi all'interno della cartella `com.sweven.blockcovid (test)`.
 
 {% include prev_next.liquid %}
