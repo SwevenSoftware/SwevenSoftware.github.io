@@ -51,22 +51,27 @@ Le actions, gli errori e i messaggi di conferma, sono gestiti tramite dei tipi e
 
 Di seguito un esempio generico dell'architettura per l'applicazione web:
 
-![](/assets/web/web_scheme.png)
+[![](/assets/web/web_scheme.png)](/assets/web/web_scheme.png)
+> Click per ingrandire
 
 Schema dell'architettura per la pagina di login:
 
-![](/assets/web/login_scheme.png)
+[![](/assets/web/login_scheme.png)](/assets/web/login_scheme.png)
+> Click per ingrandire
 
 Schema dell'architettura per la pagina degli utenti:
 
-![](/assets/web/accounts_scheme.png)
+[![](/assets/web/accounts_scheme.png)](/assets/web/accounts_scheme.png)
+> Click per ingrandire
 
 Schema dell'architettura per la pagina delle stanze:
 
-![](/assets/web/rooms_scheme.png)
+[![](/assets/web/rooms_scheme.png)](/assets/web/rooms_scheme.png)
+> Click per ingrandire
 
 Schema dell'architettura per la pagina dei report:
 
-![](/assets/web/reports_scheme.png)
+[![](/assets/web/reports_scheme.png)](/assets/web/reports_scheme.png)
+> Click per ingrandire
 
 {% include prev_next.liquid %}

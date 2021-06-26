@@ -19,16 +19,16 @@ nav_order: 4
 
 ## Test di unità
 I test di unità sono stati sviluppati utilizzando Junit e Mockito.
-Per eseguirli tramite Android Studio è sufficiente fare tasto destro sul file di test all'interno della cartella "com.sweven.blockcovid (test)" e cliccare su "Run Test with Coverage".
+Per eseguirli tramite Android Studio è sufficiente fare tasto destro sul file di test all'interno della cartella `com.sweven.blockcovid (test)` e cliccare su ***Run Test with Coverage***.
 Alternativamente è possibile eseguirli tramite JaCoCo tramite il comando:
 ```sh
 ./gradlew clean test jacocoTestReport
 ```
-dalla root del progetto. Verrà generato un report con il code coverage all'interno della cartella "/app/build/reports/jacoco/jacocoTestReport/html/index.html".
+dalla root del progetto. Verrà generato un report con il code coverage all'interno della cartella `app/build/reports/jacoco/jacocoTestReport/html/index.html`.
 
 ## Test di sistema
-I test di sistema invece sono stati sviluppati tramite Espresso, situati nella cartella "/tests".
-Per eseguirli tramite Android Studio è sufficiente copiarli all'interno della cartella "androidTest", fare tasto destro sul file di test e cliccare su "Run Test with Coverage".
+I test di sistema invece sono stati sviluppati tramite Espresso, situati nella cartella `/tests`.
+Per eseguirli tramite Android Studio è sufficiente copiarli all'interno della cartella `androidTest`, fare tasto destro sul file di test e cliccare su ***Run Test with Coverage***.
 Prima di eseguire questi test è necessario fare il run sul dispositivo mobile o sulla macchina virtuale e assicurarsi di essere sulla pagina di login. 
 Inoltre è necessario disabilitare le animazioni del dispositivo Android tramite le Opzioni sviluppatore. 
 
