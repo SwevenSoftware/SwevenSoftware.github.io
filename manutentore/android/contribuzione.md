@@ -23,8 +23,10 @@ Come indicato all'interno della sezione [Contributing del README](https://github
 
 Modifiche al codice sorgente (per ogni _branch_ e per _Pull Request_) scatenano i processi di [_continuous-integration_](/glossario#continuous-integration) attraverso _GitHub Actions_, seguendo due workflow (`.github/workflows`):
 - `build-app`
-    - Compila il codice
+    - Compila il codice;
 - `detekt-analysis`
-    - Esegue un'analisi statica del codice
+    - Esegue un'analisi statica del codice;
+- `code-coverage`
+    - Calcola la code coverage e la carica su [Codecov](https://codecov.io/).
 
 {% include prev_next.liquid %}

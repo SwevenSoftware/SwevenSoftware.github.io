@@ -25,7 +25,7 @@ Android SDK fornisce le librerie API e gli strumenti per sviluppatori necessari 
 
 - - -
 
-### Kotlin 1.4.32
+### Kotlin 1.5.20
 
 Kotlin è un linguaggio di programmazione general purpose, multi-paradigma, open source sviluppato dall'azienda di software JetBrains. Kotlin si basa sulla JVM (Java Virtual Machine) e dal 2019 viene utilizzato da Google per lo sviluppo Android.
 
@@ -33,7 +33,7 @@ Kotlin è un linguaggio di programmazione general purpose, multi-paradigma, open
 
 - - -
 
-### Gradle 6.5
+### Gradle 6.7.1
 Gradle è uno strumento di automazione della build open source progettato per essere abbastanza flessibile da creare quasi tutti i tipi di software. Gradle viene eseguito sulla JVM e per utilizzarlo è necessario disporre di un Java Development Kit (JDK)
 
 [https://docs.gradle.org/current/userguide/userguide.html](https://docs.gradle.org/current/userguide/userguide.html)
